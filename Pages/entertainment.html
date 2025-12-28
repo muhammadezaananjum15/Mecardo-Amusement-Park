@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entertainment | Mercado Amusement Park</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../Assets/Gallery,Attractions,Logo/favicon-32x32.png">
+  <link rel="stylesheet" href="./entertainment.css " />
+</head>
+<body>
+  <nav class="nav-bar container-fluid ">
+    <div class="d-flex align-items-center justify-content-between w-100">
+      <a href="../index.html" class="logo-navbar fw-bold"><img
+          src="../Assets/Gallery,Attractions,Logo/Logo Of Nav.png" alt="" class="img-fluid"></a>
+      <div class="hamburger d-lg-none" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-items justify-content-center gap-4 d-none d-lg-flex m-0 p-0">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./about.html">About us</a></li>
+        <li><a href="./tickets.html">Ticket & Prices</a></li>
+        <li><a href="./restaurant.html">Restaurants</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./contact.html">Contact us</a></li>
+        <li><a href="./disclaimer.html">Disclaimer</a></li>
+
+      </ul>
+
+      <!-- Buttons -->
+      <div class="btn-navbar gap-3 d-none d-lg-flex">
+        <button class="btn btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">
+          Account
+        </button>
+        <a href="./booking.html"><button class="btn btn-ticket">
+            Buy Tickets
+          </button></a>
+      </div>
+    </div>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="btn-close text-white mb-4" id="closeMenu"></button>
+      <ul class="flex-column d-flex gap-3">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./about.html">About us</a></li>
+        <li><a href="./tickets.html">Ticket & Prices</a></li>
+        <li><a href="./restaurant.html">Restaurants</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./contact.html">Contact us</a></li>
+        <li><a href="./disclaimer.html">Disclaimer</a></li>
+        <li>
+          <button class="btn btn-login w-100 mb-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Account
+          </button>
+        </li>
+        <li>
+          <a href="./booking.html"><button class="btn btn-ticket w-100">
+              Buy Tickets
+            </button></a>
+        </li>
+      </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+  </nav>
+
+  <!-- ================= LOGIN MODAL ================= -->
+  <div class="modal fade" id="loginModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h5 class="modal-title">Login to Your Account</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <label>Email Address</label>
+            <input type="email" class="form-control mb-3" placeholder="Enter email" />
+            <label>Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Enter password" />
+            <button class="btn btn-ticket w-100">Login</button>
+          </form>
+          <div class="text-center mt-3">
+            <small>Don't have an account?
+              <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#signupModal">Create One</a>
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SIGN-UP MODAL ================= -->
+  <div class="modal fade" id="signupModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h5 class="modal-title">Create Your Account</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <label>Full Name</label>
+            <input type="text" class="form-control mb-3" placeholder="Full name" />
+            <label>Email Address</label>
+            <input type="email" class="form-control mb-3" placeholder="Email" />
+            <label>Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Password" />
+            <label>Confirm Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Confirm password" />
+            <button class="btn btn-ticket w-100">Create Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-circle circle1"></div>
+      <div class="hero-circle circle2"></div>
+      <div class="hero-circle circle3"></div>
+      <div class="hero-circle circle4"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-row">
+        <!-- Left Content -->
+        <div class="hero-content">
+          <div class="hero-badge mb-3 animate-fade-up delay-1">
+            <i class="bi bi-stars"></i>
+            <span>The Nation's Premier Theme Park</span>
+          </div>
+
+          <h1 class="animate-fade-up delay-2">Welcome to <span>Mercado Amusement Entertainment Section</span></h1>
+
+          <p class="hero-subtitle animate-fade-up delay-3">
+            45 acres of thrilling adventures await you
+          </p>
+
+          <p class="hero-description animate-fade-up delay-4">
+            Created by Seth Groups of Companies over 5 years of meticulous development. Experience
+            world-class attractions, dining, and entertainment that has made us the nation's
+            pride.
+          </p>
+
+          <div class="hero-buttons animate-fade-up delay-5">
+            <button class="btn btn-hero btn-xl" data-bs-toggle="modal" data-bs-target="#ticketModal">
+              Buy Tickets
+            </button>
+            <a href="attractions.html" class="btn btn-outline btn-xl">
+              <i class="bi bi-play-btn-fill me-2"></i> Explore Park
+            </a>
+          </div>
+
+          <div class="hero-stats mt-5">
+            <div class="stat animate-fade-up delay-6">
+              <i class="bi bi-tree-fill stat-icon primary"></i>
+              <p class="stat-value primary">45+</p>
+              <p class="stat-label">Acres of Fun</p>
+            </div>
+            <div class="stat animate-fade-up delay-7">
+              <i class="bi bi-stars stat-icon accent"></i>
+              <p class="stat-value accent">50+</p>
+              <p class="stat-label">Attractions</p>
+            </div>
+            <div class="stat animate-fade-up delay-8">
+              <i class="bi bi-geo-alt-fill stat-icon secondary"></i>
+              <p class="stat-value secondary">6</p>
+              <p class="stat-label">Themed Zones</p>
+            </div>
+            <div class="stat animate-fade-up delay-9">
+              <i class="bi bi-people-fill stat-icon primary"></i>
+              <p class="stat-value primary">5M+</p>
+              <p class="stat-label">Happy Visitors</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section class="entertainment-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Entertainment Zone</h2>
+        <p>Experience fun, excitement, and unforgettable moments for everyone</p>
+      </div>
+
+      <div class="entertainment-grid">
+        <!-- Card 1 -->
+        <div class="entertainment-card">
+          <img src="../Assets/Gallery,Attractions,Logo/Live show.jpg" alt="Live Shows">
+          <div class="card-content">
+            <h3>Live Shows</h3>
+            <p>Enjoy thrilling performances, music, and stage shows.</p>
+            <a href="live-shows.html">Explore</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="entertainment-card">
+          <img src="../Assets/Gallery,Attractions,Logo/Aqua World 4.jpeg" alt="Kids Zone">
+          <div class="card-content">
+            <h3>Kids Zone</h3>
+            <p>Colorful rides and fun games specially designed for kids.</p>
+            <a href="kids-zone.html">Explore</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="entertainment-card">
+          <img src="../Assets/Gallery,Attractions,Logo/Vr.jpg" alt="Gaming Arena">
+          <div class="card-content">
+            <h3>Gaming Arena</h3>
+            <p>Arcade games, VR experiences, and interactive fun.</p>
+            <a href="gaming-arena.html">Explore</a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="entertainment-card">
+          <img src="../Assets/Gallery,Attractions,Logo/4dcinema.jpeg" alt="Cinema">
+          <div class="card-content">
+            <h3>4D Cinema</h3>
+            <p>Feel the action with immersive 4D movie experiences.</p>
+            <a href="cinema.html">Explore</a>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="entertainment-card">
+          <img src="../Assets/Gallery,Attractions,Logo/PARTY PLAZA – Attractions-4.jpeg" alt="Family Fun">
+          <div class="card-content">
+            <h3>Family Fun</h3>
+            <p>Games and activities everyone in the family can enjoy.</p>
+            <a href="family-fun">Explore</a>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="entertainment-card">
+          <img src="../Assets/Gallery,Attractions,Logo/Nights Event.jpg" alt="Night Events">
+          <div class="card-content">
+            <h3>Night Events</h3>
+            <p>DJ nights, light shows, and special weekend events.</p>
+            <a href="night-events.html">Explore</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="entertainment-alt">
+    <div class="container">
+      <div class="alt-header">
+        <span>Discover More</span>
+        <h2>Entertainment Highlights</h2>
+      </div>
+
+      <div class="alt-grid">
+        <a href="stage-shows.html" class="alt-item">
+          <div class="alt-icon"><i class="bi bi-mic"></i></div>
+          <h3>Stage Shows</h3>
+          <p>Live performances & cultural events</p>
+        </a>
+
+        <a href="magic-zone.html" class="alt-item">
+          <div class="alt-icon"><i class="bi bi-magic"></i></div>
+          <h3>Magic Zone</h3>
+          <p>Illusions, tricks & fun surprises</p>
+        </a>
+
+        <a href="vr-world.html" class="alt-item">
+          <div class="alt-icon">🕶️</div>
+          <h3>VR World</h3>
+          <p>Next-level virtual adventures</p>
+        </a>
+
+        <a href="street-performers.html" class="alt-item">
+          <div class="alt-icon">🎭</div>
+          <h3>Street Performers</h3>
+          <p>Live fun around every corner</p>
+        </a>
+
+        <a href="family-games.html" class="alt-item">
+          <div class="alt-icon">🎯</div>
+          <h3>Family Games</h3>
+          <p>Compete, laugh & win prizes</p>
+        </a>
+
+        <a href="night-festival.html" class="alt-item">
+          <div class="alt-icon">🌙</div>
+          <h3>Night Festival</h3>
+          <p>Lights, music & weekend vibes</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- Daily Shows Section -->
+  <section class="shows-section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="section-icon primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18V5l12-2v13" />
+            <circle cx="6" cy="18" r="3" />
+            <circle cx="18" cy="16" r="3" />
+          </svg>
+        </div>
+        <h2>Daily Shows</h2>
+      </div>
+
+      <div class="shows-grid">
+        <!-- Magical Parade -->
+        <div class="show-card fade-up">
+          <div class="show-header">
+            <span class="show-type">Parade</span>
+            <h3>Magical Parade</h3>
+          </div>
+          <p>A spectacular parade featuring colorful floats, beloved characters, and lively music that winds through the
+            park.</p>
+          <div class="show-details">
+            <div class="detail">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Main Parade Route
+            </div>
+            <div class="detail">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              30 minutes
+            </div>
+            <div class="detail">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                <line x1="16" x2="16" y1="2" y2="6" />
+                <line x1="8" x2="8" y1="2" y2="6" />
+                <line x1="3" x2="21" y1="10" y2="10" />
+              </svg>
+              Showtimes: 12:00 PM, 4:00 PM, 7:00 PM
+            </div>
+          </div>
+        </div>
+
+        <!-- Starlight Fireworks -->
+        <div class="show-card fade-up">
+          <div class="show-header">
+            <span class="show-type">Fireworks</span>
+            <h3>Starlight Fireworks Spectacular</h3>
+          </div>
+          <p>End your day with an awe-inspiring fireworks show synchronized to music, illuminating the night sky.</p>
+          <div class="show-details">
+            <div class="detail">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Castle Lawn
+            </div>
+            <div class="detail">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              15 minutes
+            </div>
+            <div class="detail">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                <line x1="16" x2="16" y1="2" y2="6" />
+                <line x1="8" x2="8" y1="2" y2="6" />
+                <line x1="3" x2="21" y1="10" y2="10" />
+              </svg>
+              Showtimes: 9:30 PM
+            </div>
+          </div>
+        </div>
+
+        <!-- Acrobatic Wonders -->
+        <div class="show-card fade-up">
+          <div class="show-header">
+            <span class="show-type">Live Show</span>
+            <h3>Acrobatic Wonders</h3>
+          </div>
+          <p>Witness breathtaking aerial performances by world-class acrobats in our climate-controlled theater.</p>
+          <div class="show-details">
+            <div class="detail">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Grand Theater
+            </div>
+            <div class="detail">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              45 minutes
+            </div>
+            <div class="detail">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                <line x1="16" x2="16" y1="2" y2="6" />
+                <line x1="8" x2="8" y1="2" y2="6" />
+                <line x1="3" x2="21" y1="10" y2="10" />
+              </svg>
+              Showtimes: 11:00 AM, 2:00 PM, 5:00 PM
+            </div>
+          </div>
+        </div>
+
+        <!-- DJ Dance Party -->
+        <div class="show-card fade-up">
+          <div class="show-header">
+            <span class="show-type">Dance Party</span>
+            <h3>DJ Dance Party</h3>
+          </div>
+          <p>Get moving with our resident DJ spinning the hottest hits. Perfect for families and teens alike!</p>
+          <div class="show-details">
+            <div class="detail">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Party Plaza Stage
+            </div>
+            <div class="detail">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              60 minutes
+            </div>
+            <div class="detail">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                <line x1="16" x2="16" y1="2" y2="6" />
+                <line x1="8" x2="8" y1="2" y2="6" />
+                <line x1="3" x2="21" y1="10" y2="10" />
+              </svg>
+              Showtimes: 3:00 PM, 6:00 PM
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Character Meet & Greet Section -->
+  <section class="characters-section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="section-icon accent">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+            <circle cx="12" cy="13" r="3" />
+          </svg>
+        </div>
+        <h2 class="text-dark">Meet Our Characters</h2>
+      </div>
+
+      <div class="characters-grid">
+        <div class="character-card fade-up">
+          <div class="character-avatar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+              <path d="M5 3v4" />
+              <path d="M19 17v4" />
+              <path d="M3 5h4" />
+              <path d="M17 19h4" />
+            </svg>
+          </div>
+          <h3>Captain Adventure</h3>
+          <p class="location">Thrill Zone Entrance</p>
+          <p class="times">10AM-12PM, 2PM-5PM</p>
+        </div>
+
+        <div class="character-card fade-up">
+          <div class="character-avatar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+              <path d="M5 3v4" />
+              <path d="M19 17v4" />
+              <path d="M3 5h4" />
+              <path d="M17 19h4" />
+            </svg>
+          </div>
+          <h3>Princess Stardust</h3>
+          <p class="location">Fantasy Kingdom Castle</p>
+          <p class="times">11AM-1PM, 3PM-6PM</p>
+        </div>
+
+        <div class="character-card fade-up">
+          <div class="character-avatar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+              <path d="M5 3v4" />
+              <path d="M19 17v4" />
+              <path d="M3 5h4" />
+              <path d="M17 19h4" />
+            </svg>
+          </div>
+          <h3>Ranger Rex</h3>
+          <p class="location">Adventure Forest Lodge</p>
+          <p class="times">10AM-12PM, 2PM-4PM</p>
+        </div>
+
+        <div class="character-card fade-up">
+          <div class="character-avatar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+              <path d="M5 3v4" />
+              <path d="M19 17v4" />
+              <path d="M3 5h4" />
+              <path d="M17 19h4" />
+            </svg>
+          </div>
+          <h3>Cosmo the Space Dog</h3>
+          <p class="location">Space Station Hub</p>
+          <p class="times">11AM-1PM, 4PM-6PM</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasonal Events Section -->
+  <section class="seasonal-section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="section-icon secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 8-9.04 9.06a2.82 2.82 0 1 0 3.98 3.98L16 12" />
+            <circle cx="17" cy="7" r="5" />
+          </svg>
+        </div>
+        <h2>Seasonal Events</h2>
+      </div>
+
+      <div class="seasonal-grid">
+        <div class="seasonal-card fade-up">
+          <span class="event-date">June - August</span>
+          <h3>Summer Splash Festival</h3>
+          <p>Extra water attractions, extended hours, and special summer-themed shows.</p>
+        </div>
+
+        <div class="seasonal-card fade-up">
+          <span class="event-date">October</span>
+          <h3>Halloween Spooktacular</h3>
+          <p>Spooky decorations, costume contests, and family-friendly haunted experiences.</p>
+        </div>
+
+        <div class="seasonal-card fade-up">
+          <span class="event-date">December - January</span>
+          <h3>Winter Wonderland</h3>
+          <p>Holiday lights, snow machines, ice skating, and festive celebrations.</p>
+        </div>
+
+        <div class="seasonal-card fade-up">
+          <span class="event-date">March - April</span>
+          <h3>Spring Bloom Festival</h3>
+          <p>Flower displays, Easter egg hunts, and special character appearances.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pro Tip Banner -->
+  <section class="tip-banner">
+    <div class="container">
+      <p>💡 Pro Tip: Download our mobile app for real-time show schedules and character location updates!</p>
+    </div>
+  </section>
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Logo & About -->
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <img src="../Assets/Gallery,Attractions,Logo/Footer.png" alt="Mercado Park Logo">
+          </a>
+
+          <p class="footer-description">
+            The nation's pride, brought to you by Seth Groups of Companies.
+            45 acres of pure adventure, thrill, and family entertainment.
+          </p>
+
+          <div class="footer-social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-h42">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./Attractions.html">Zones & Attractions</a></li>
+            <li><a href="./restaurant.html">Restaurants</a></li>
+            <li><a href="./entertainment.html">Entertainment</a></li>
+            <li><a href="./ticket&prices.html">Tickets & Prices</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Information -->
+        <div>
+          <h4 class="footer-h41">Information</h4>
+          <ul class="footer-links">
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href="./disclaimer.html">Disclaimer</a></li>
+            <li><a href="/index.html">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <!-- NEW SECTION: Park Highlights -->
+        <div class="footer-highlights">
+          <h4>Why Visit Mercado?</h4>
+          <ul>
+            <li>🎢 50+ Thrilling Rides</li>
+            <li>🎭 Live Shows & Events</li>
+            <li>🍔 Food Streets & Cafés</li>
+            <li>👨‍👩‍👧 Family & Kids Zones</li>
+            <li>🌙 Night Entertainment</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>© 2024 Mercado Amusement Park. A Seth Groups Company. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="disclaimer.html">Privacy Policy</a>
+          <a href="disclaimer.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Boostrap Java Script CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+  <!-- Java Script Linking -->
+  <script src="./entertainemnt.js"></script>
+</body>
+
+</html>

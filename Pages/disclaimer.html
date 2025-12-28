@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disclaimer | Mercado</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../Assets/Gallery,Attractions,Logo/favicon-32x32.png">
+  <link rel="stylesheet" href="./disclaimer.css">
+</head>
+<body>
+  <nav class="nav-bar container-fluid ">
+    <div class="d-flex align-items-center justify-content-between w-100">
+      <a href="../index.html" class="logo-navbar fw-bold"><img
+          src="../Assets/Gallery,Attractions,Logo/Logo Of Nav.png " alt="" class="img-fluid"></a>
+      <div class="hamburger d-lg-none" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-items justify-content-center gap-3 d-none d-lg-flex m-0 p-0">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./about.html">About us</a></li>
+        <li><a href="./tickets.html">Ticket & Prices</a></li>
+        <li><a href="./entertainment.html">Entertainment</a></li>
+        <li><a href="./restaurant.html">Restaurants</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+      <div class="btn-navbar gap-3 d-none d-lg-flex">
+        <button class="btn btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">
+          Account
+        </button>
+        <a href="./booking.html"><button class="btn btn-ticket">
+            Buy Tickets
+          </button></a>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="btn-close text-white mb-4" id="closeMenu"></button>
+      <ul class="flex-column d-flex gap-3">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./about.html">About us</a></li>
+        <li><a href="./tickets.html">Ticket & Prices</a></li>
+        <li><a href="./entertainment.html">Entertainment</a></li>
+        <li><a href="./restaurant.html">Restaurants</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li>
+          <button class="btn btn-login w-100 mb-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Account
+          </button>
+        </li>
+        <li>
+          <a href="./booking.html"><button class="btn btn-ticket w-100">
+              Buy Tickets
+            </button></a>
+        </li>
+      </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+  </nav>
+  <div class="modal fade" id="loginModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h5 class="modal-title">Login to Your Account</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <label>Email Address</label>
+            <input type="email" class="form-control mb-3" placeholder="Enter email" />
+            <label>Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Enter password" />
+            <button class="btn btn-ticket w-100">Login</button>
+          </form>
+          <div class="text-center mt-3">
+            <small>Don't have an account?
+              <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#signupModal">Create One</a>
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="loginModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h5 class="modal-title">Login to Your Account</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <label>Email Address</label>
+            <input type="email" class="form-control mb-3" placeholder="Enter email" />
+            <label>Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Enter password" />
+            <button class="btn btn-ticket w-100">Login</button>
+          </form>
+          <div class="text-center mt-3">
+            <small>Don't have an account?
+              <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#signupModal">Create One</a>
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="signupModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h5 class="modal-title">Create Your Account</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <label>Full Name</label>
+            <input type="text" class="form-control mb-3" placeholder="Full name" />
+            <label>Email Address</label>
+            <input type="email" class="form-control mb-3" placeholder="Email" />
+            <label>Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Password" />
+            <label>Confirm Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Confirm password" />
+            <button class="btn btn-ticket w-100">Create Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="hero">
+    <h1 class="mt-5">Disclaimer</h1>
+    <p>Please read this disclaimer carefully before using Mercado Amusement Park website or visiting our park. Your use
+      of our services indicates acceptance of these terms.</p>
+  </section>
+  <div class="container">
+    <div class="disclaimer-card fade-up">
+      <h2>1. General Information</h2>
+      <p>All information on this website is provided for general informational purposes. While we make every effort to
+        ensure accuracy, Mercado Amusement Park does not guarantee the completeness, reliability, or accuracy of the
+        content. The information may change without notice.</p>
+    </div>
+
+    <div class="disclaimer-card fade-up">
+      <h2>2. Use of Website</h2>
+      <p>By accessing this website, you agree to use it responsibly and legally. Any misuse of the website, including
+        hacking, data scraping, or spreading false information, is strictly prohibited and may result in legal action.
+      </p>
+    </div>
+
+    <div class="disclaimer-card fade-up">
+      <h2>3. Ticketing and Booking</h2>
+      <p>All ticket sales are final unless otherwise stated. Mercado Amusement Park reserves the right to change ticket
+        prices, terms, and conditions without prior notice. Online booking requires accurate information, and we are not
+        responsible for incorrect entries or payment issues caused by users.</p>
+    </div>
+
+    <div class="disclaimer-card fade-up">
+      <h2>4. Liability and Safety</h2>
+      <p>Visitors participate in park activities at their own risk. Mercado Amusement Park is not liable for injuries,
+        accidents, or loss of personal belongings. Please follow safety instructions provided by staff and posted
+        throughout the park. Children must be supervised at all times.</p>
+    </div>
+
+    <div class="disclaimer-card fade-up">
+      <h2>5. Medical Considerations</h2>
+      <p>Guests with pre-existing medical conditions should consult a physician before visiting. Certain rides and
+        attractions may not be suitable for individuals with heart problems, back/neck issues, or pregnancy. We reserve
+        the right to restrict access to attractions for safety reasons.</p>
+    </div>
+
+    <div class="disclaimer-card fade-up">
+      <h2>6. External Links</h2>
+      <p>Our website may contain links to third-party sites. These links are provided for convenience, and Mercado
+        Amusement Park is not responsible for the content, accuracy, or reliability of these external websites.
+        Accessing external links is at your own risk.</p>
+    </div>
+
+    <div class="disclaimer-card fade-up">
+      <h2>7. Intellectual Property</h2>
+      <p>All content, images, videos, and designs on this website are owned by Mercado Amusement Park or our partners.
+        Unauthorized copying, distribution, or commercial use of our intellectual property is strictly prohibited and
+        may result in legal action.</p>
+    </div>
+
+    <div class="disclaimer-card fade-up">
+      <h2>8. Privacy Policy</h2>
+      <p>We respect your privacy. Personal data collected during bookings or website usage will be used solely for
+        processing services and communications. For full details, please refer to our Privacy Policy page. By using this
+        website, you consent to our privacy practices.</p>
+    </div>
+
+    <div class="disclaimer-card fade-up">
+      <h2>9. Changes to Disclaimer</h2>
+      <p>We may update this disclaimer at any time. Changes will take effect immediately upon posting. Users are
+        encouraged to review this page regularly to stay informed about their rights and responsibilities.</p>
+    </div>
+
+    <div class="disclaimer-card fade-up">
+      <h2>10. Governing Law</h2>
+      <p>This disclaimer and the use of this website are governed by the laws of the country where Mercado Amusement
+        Park operates. Any disputes arising from website usage or park activities will be resolved in accordance with
+        applicable laws and regulations.</p>
+    </div>
+
+    <div class="disclaimer-card fade-up">
+      <h2>11. Park Rules & Conduct</h2>
+      <p>All visitors are expected to follow park rules and respect staff and fellow guests. Misconduct, including
+        aggressive behavior, vandalism, or violations of safety rules, may result in removal from the park without
+        refund.</p>
+    </div>
+
+    <div class="disclaimer-card fade-up">
+      <h2>12. Contact Us</h2>
+      <p>If you have questions regarding this disclaimer or our services, please contact our support team via the
+        Contact page. We are committed to providing safe, enjoyable, and transparent experiences for all visitors.</p>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <img src="../Assets/Gallery,Attractions,Logo/Footer.png" alt="Mercado Park Logo">
+          </a>
+          <p class="footer-description">
+            The nation's pride, brought to you by Seth Groups of Companies.
+            45 acres of pure adventure, thrill, and family entertainment.
+          </p>
+          <div class="footer-social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-h42">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./Attractions.html">Zones & Attractions</a></li>
+            <li><a href="./restaurant.html">Restaurants</a></li>
+            <li><a href="./entertainment.html">Entertainment</a></li>
+            <li><a href="./ticket&prices.html">Tickets & Prices</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-h41">Information</h4>
+          <ul class="footer-links">
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href="./disclaimer.html">Disclaimer</a></li>
+            <li><a href="./contact.html">Sitemap</a></li>
+          </ul>
+        </div>
+        <div class="footer-highlights">
+          <h4 class="footer-h43">Why Visit Mercado?</h4>
+          <ul>
+            <li>🎢 50+ Thrilling Rides</li>
+            <li>🎭 Live Shows & Events</li>
+            <li>🍔 Food Streets & Cafés</li>
+            <li>👨‍👩‍👧 Family & Kids Zones</li>
+            <li>🌙 Night Entertainment</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Mercado Amusement Park. A Seth Groups Company. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="disclaimer.html">Privacy Policy</a>
+          <a href="disclaimer.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+  <script src="./disclaimer.js">
+  </script>
+</body>
+
+</html>
