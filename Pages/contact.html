@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Mercado Amusement Park</title>
+  <!-- Boostrap Icon Cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Boostrap CDN CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Favicon Link Here -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../Assets/Gallery,Attractions,Logo/favicon-32x32.png">
+  <!-- Styling CSS -->
+  <link rel="stylesheet" href="./contact.css" />
+</head>
+<body>
+  <nav class="nav-bar container-fluid ">
+    <div class="d-flex align-items-center justify-content-between w-100">
+      <a href="/index.html" class="logo-navbar fw-bold"><img
+          src="../Assets/Gallery,Attractions,Logo/Logo Of Nav.png" alt="" class="img-fluid"></a>
+      <div class="hamburger d-lg-none" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-items justify-content-center gap-3 d-none d-lg-flex m-0 p-0">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./about.html">About us</a></li>
+        <li><a href="./tickets.html">Ticket & Prices</a></li>
+        <li><a href="./entertainment.html">Entertainment</a></li>
+        <li><a href="./restaurant.html">Restaurants</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./disclaimer.html">Disclaimer</a></li>
+      </ul>
+      <div class="btn-navbar gap-3 d-none d-lg-flex">
+        <button class="btn btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">
+          Account
+        </button>
+        <a href="./booking.html"><button class="btn btn-ticket">
+            Buy Tickets
+          </button></a>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="btn-close text-white mb-4" id="closeMenu"></button>
+      <ul class="flex-column d-flex gap-3">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./about.html">About us</a></li>
+        <li><a href="./tickets.html">Ticket & Prices</a></li>
+        <li><a href="./entertainment.html">Entertainment</a></li>
+        <li><a href="./restaurant.html">Restaurants</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./disclaimer.html">Disclaimer</a></li>
+        <li>
+          <button class="btn btn-login w-100 mb-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Account
+          </button>
+        </li>
+        <li>
+          <a href="./booking.html"><button class="btn btn-ticket">
+              Buy Tickets
+            </button></a>
+        </li>
+      </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+  </nav>
+  <div class="modal fade" id="loginModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h5 class="modal-title">Login to Your Account</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <label>Email Address</label>
+            <input type="email" class="form-control mb-3" placeholder="Enter email" />
+            <label>Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Enter password" />
+            <button class="btn btn-ticket w-100">Login</button>
+          </form>
+          <div class="text-center mt-3">
+            <small>Don't have an account?
+              <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#signupModal">Create One</a>
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="loginModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h5 class="modal-title">Login to Your Account</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <label>Email Address</label>
+            <input type="email" class="form-control mb-3" placeholder="Enter email" />
+            <label>Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Enter password" />
+            <button class="btn btn-ticket w-100">Login</button>
+          </form>
+          <div class="text-center mt-3">
+            <small>Don't have an account?
+              <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#signupModal">Create One</a>
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="signupModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h5 class="modal-title">Create Your Account</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <label>Full Name</label>
+            <input type="text" class="form-control mb-3" placeholder="Full name" />
+            <label>Email Address</label>
+            <input type="email" class="form-control mb-3" placeholder="Email" />
+            <label>Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Password" />
+            <label>Confirm Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Confirm password" />
+            <button class="btn btn-ticket w-100">Create Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-circle circle1"></div>
+      <div class="hero-circle circle2"></div>
+      <div class="hero-circle circle3"></div>
+      <div class="hero-circle circle4"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-row">
+        <div class="hero-content">
+          <div class="hero-badge mb-3 animate-fade-up delay-1">
+            <i class="bi bi-stars"></i>
+            <span>The Nation's Premier Theme Park</span>
+          </div>
+
+          <h1 class="animate-fade-up delay-2">Welcome to <span>Mercado Contact Section</span></h1>
+
+          <p class="hero-subtitle animate-fade-up delay-3">
+            45 acres of thrilling adventures await you
+          </p>
+
+          <p class="hero-description animate-fade-up delay-4">
+            Created by Seth Groups of Companies over 5 years of meticulous development. Experience
+            world-class attractions, dining, and entertainment that has made us the nation's
+            pride.
+          </p>
+
+          <div class="hero-buttons animate-fade-up delay-5">
+            <button class="btn btn-hero btn-xl" data-bs-toggle="modal" data-bs-target="#ticketModal">
+              Buy Tickets
+            </button>
+            <a href="attractions.html" class="btn btn-outline btn-xl">
+              <i class="bi bi-play-btn-fill me-2"></i> Explore Park
+            </a>
+          </div>
+
+          <div class="hero-stats mt-5">
+            <div class="stat animate-fade-up delay-6">
+              <i class="bi bi-tree-fill stat-icon primary"></i>
+              <p class="stat-value primary">45+</p>
+              <p class="stat-label">Acres of Fun</p>
+            </div>
+            <div class="stat animate-fade-up delay-7">
+              <i class="bi bi-stars stat-icon accent"></i>
+              <p class="stat-value accent">50+</p>
+              <p class="stat-label">Attractions</p>
+            </div>
+            <div class="stat animate-fade-up delay-8">
+              <i class="bi bi-geo-alt-fill stat-icon secondary"></i>
+              <p class="stat-value secondary">6</p>
+              <p class="stat-label">Themed Zones</p>
+            </div>
+            <div class="stat animate-fade-up delay-9">
+              <i class="bi bi-people-fill stat-icon primary"></i>
+              <p class="stat-value primary">5M+</p>
+              <p class="stat-label">Happy Visitors</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-main">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2 class="fade-up">Let's Connect!</h2>
+
+          <div class="info-cards">
+            <div class="info-card fade-up" style="animation-delay: 0.1s;">
+              <div class="info-icon primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div class="info-content">
+                <h3>Address</h3>
+                <p>123 Adventure Avenue, Metro City</p>
+              </div>
+            </div>
+
+            <div class="info-card fade-up" style="animation-delay: 0.2s;">
+              <div class="info-icon secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </div>
+              <div class="info-content">
+                <h3>Phone</h3>
+                <p>+1 (555) 123-4567</p>
+              </div>
+            </div>
+
+            <div class="info-card fade-up" style="animation-delay: 0.3s;">
+              <div class="info-icon accent">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+              </div>
+              <div class="info-content">
+                <h3>Email</h3>
+                <p>info@mercadopark.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper fade-up" style="animation-delay: 0.4s;">
+          <div class="contact-form-card">
+            <div class="form-header">
+              <h2>Send Us a Message</h2>
+            </div>
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your full name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="your@email.com" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" placeholder="How can we help?" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" id="submitBtn">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contact-faq">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+
+    <div class="faq-box">
+      <details>
+        <summary>
+          What are the park opening hours?
+          <span class="faq-icon">+</span>
+        </summary>
+        <p>The park is open daily from 10:00 AM to 8:00 PM. Timings may vary on holidays.</p>
+      </details>
+
+      <details>
+        <summary>
+          Can I book tickets online?
+          <span class="faq-icon">+</span>
+        </summary>
+        <p>Yes, online ticket booking is available through our official website.</p>
+      </details>
+
+      <details>
+        <summary>
+          Is the park safe for children?
+          <span class="faq-icon">+</span>
+        </summary>
+        <p>Absolutely! We follow strict safety standards and have trained staff on all rides.</p>
+      </details>
+
+      <details>
+        <summary>
+          Do you offer family or group discounts?
+          <span class="faq-icon">+</span>
+        </summary>
+        <p>Yes, special discounts are available for families, schools, and group bookings.</p>
+      </details>
+    </div>
+  </section>
+  <section class="contact-map-section">
+    <div class="container">
+      <h2 class="section-title">Find Us</h2>
+      <div class="map-wrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.123456789!2d-46.6333081845!3d-23.550519768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c99f0f0f0f%3A0xabcdef1234567890!2s123%20Adventure%20Avenue!5e0!3m2!1sen!2s!4v1234567890"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-overlay">
+          <div class="map-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <p class="map-address">123 Adventure Avenue, Metro City</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="toast" class="toast">
+    <div class="toast-content">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+        <polyline points="22 4 12 14.01 9 11.01" />
+      </svg>
+      <div class="toast-text">
+        <strong>Message Sent!</strong>
+        <span>We'll get back to you within 24-48 hours.</span>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <img src="../Assets/Gallery,Attractions,Logo/Footer.png" alt="Mercado Park Logo">
+          </a>
+
+          <p class="footer-description">
+            The nation's pride, brought to you by Seth Groups of Companies.
+            45 acres of pure adventure, thrill, and family entertainment.
+          </p>
+          <div class="footer-social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./Attractions.html">Zones & Attractions</a></li>
+            <li><a href="./restaurant.html">Restaurants</a></li>
+            <li><a href="./entertainment.html">Entertainment</a></li>
+            <li><a href="./ticket&prices.html">Tickets & Prices</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Information</h4>
+          <ul class="footer-links">
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href="./disclaimer.html">Disclaimer</a></li>
+            <li><a href="/index.html">Sitemap</a></li>
+          </ul>
+        </div>
+        <div class="footer-highlights">
+          <h4>Why Visit Mercado?</h4>
+          <ul>
+            <li>🎢 50+ Thrilling Rides</li>
+            <li>🎭 Live Shows & Events</li>
+            <li>🍔 Food Streets & Cafés</li>
+            <li>👨‍👩‍👧 Family & Kids Zones</li>
+            <li>🌙 Night Entertainment</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Mercado Amusement Park. A Seth Groups Company. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="disclaimer.html">Privacy Policy</a>
+          <a href="disclaimer.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+  <script src="./contact.js"></script>
+</body
+</html>

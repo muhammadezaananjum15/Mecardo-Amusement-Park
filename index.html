@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mercado Amusement Park</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./Assets/Gallery,Attractions,Logo/favicon-32x32.png">
+  <link rel="stylesheet" href="./Pages/style.css" />
+</head>
+
+<body>
+  <nav class="nav-bar container-fluid ">
+    <div class="d-flex align-items-center justify-content-between w-100">
+      <a href="./index.html" class="logo-navbar fw-bold"><img
+          src="./Assets/Gallery,Attractions,Logo/Logo Of Nav.png" alt="" class="img-fluid"></a>
+      <div class="hamburger d-lg-none" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-items justify-content-center gap-3 d-none d-lg-flex m-0 p-0">
+        <li><a href="./Pages/about.html">About us</a></li>
+        <li><a href="./Pages/tickets.html">Ticket & Prices</a></li>
+        <li><a href="./Pages/entertainment.html">Entertainment</a></li>
+        <li><a href="./Pages/restaurant.html">Restaurants</a></li>
+        <li><a href="./Pages/gallery.html">Gallery</a></li>
+        <li><a href="./Pages/contact.html">Contact us</a></li>
+        <li><a href="./Pages/disclaimer.html">Disclaimer</a></li>
+      </ul>
+      <div class="btn-navbar gap-3 d-none d-lg-flex">
+        <button class="btn btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">
+          Account
+        </button>
+        <a href="./Pages/booking.html"><button class="btn btn-ticket">
+            Buy Tickets
+          </button></a>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="btn-close text-white mb-4" id="closeMenu"></button>
+      <ul class="flex-column d-flex gap-3">
+        <li><a href="./Pages/about.html">About us</a></li>
+        <li><a href="./Pages/tickets.html">Ticket & Prices</a></li>
+        <li><a href="./Pages/entertainment.html">Entertainment</a></li>
+        <li><a href="./Pages/restaurant.html">Restaurants</a></li>
+        <li><a href="./Pages/gallery.html">Gallery</a></li>
+        <li><a href="./Pages/contact.html">Contact us</a></li>
+        <li><a href="./Pages/disclaimer.html">Disclaimer</a></li>
+        <li>
+          <button class="btn btn-login w-100 mb-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Account
+          </button>
+        </li>
+        <li>
+          <a href="./Pages/booking.html"><button class="btn btn-ticket w-100">
+              Buy Tickets
+            </button></a>
+        </li>
+      </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+  </nav>
+  <div class="modal fade" id="loginModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h5 class="modal-title">Login to Your Account</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <label>Email Address</label>
+            <input type="email" class="form-control mb-3" placeholder="Enter email" />
+            <label>Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Enter password" />
+            <button class="btn btn-ticket w-100">Login</button>
+          </form>
+          <div class="text-center mt-3">
+            <small>Don't have an account?
+              <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#signupModal">Create One</a>
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="loginModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h5 class="modal-title">Login to Your Account</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <label>Email Address</label>
+            <input type="email" class="form-control mb-3" placeholder="Enter email" />
+            <label>Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Enter password" />
+            <button class="btn btn-ticket w-100">Login</button>
+          </form>
+          <div class="text-center mt-3">
+            <small>Don't have an account?
+              <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#signupModal">Create One</a>
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="signupModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h5 class="modal-title">Create Your Account</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <label>Full Name</label>
+            <input type="text" class="form-control mb-3" placeholder="Full name" />
+            <label>Email Address</label>
+            <input type="email" class="form-control mb-3" placeholder="Email" />
+            <label>Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Password" />
+            <label>Confirm Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Confirm password" />
+            <button class="btn btn-ticket w-100">Create Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-circle circle1"></div>
+      <div class="hero-circle circle2"></div>
+      <div class="hero-circle circle3"></div>
+      <div class="hero-circle circle4"></div>
+    </div>
+    <div class="container">
+      <div class="hero-row">
+        <div class="hero-content">
+          <div class="hero-badge mb-3 animate-fade-up delay-1">
+            <i class="bi bi-stars"></i>
+            <span>The Nation's Premier Theme Park</span>
+          </div>
+          <h1 class="animate-fade-up delay-2">Welcome to <span>Mercado Amusement Park <span></h1>
+          <p class="hero-subtitle animate-fade-up delay-3">
+            45 acres of thrilling adventures await you
+          </p>
+          <p class="hero-description animate-fade-up delay-4">
+            Created by Seth Groups of Companies over 5 years of meticulous development. Experience
+            world-class attractions, dining, and entertainment that has made us the nation's
+            pride.
+          </p>
+          <div class="hero-buttons animate-fade-up delay-5">
+            <a href="./Pages/For Html/booking.html"><button class="btn btn-hero btn-xl" data-bs-toggle="modal"
+                data-bs-target="#ticketModal">
+                Buy Tickets
+              </button></a>
+            <a href="attractions.html" class="btn btn-outline btn-xl">
+              <i class="bi bi-play-btn-fill me-2"></i> Explore Park
+            </a>
+          </div>
+          <div class="hero-stats mt-5">
+            <div class="stat animate-fade-up delay-6">
+              <i class="bi bi-tree-fill stat-icon primary"></i>
+              <p class="stat-value primary">45+</p>
+              <p class="stat-label">Acres of Fun</p>
+            </div>
+            <div class="stat animate-fade-up delay-7">
+              <i class="bi bi-stars stat-icon accent"></i>
+              <p class="stat-value accent">50+</p>
+              <p class="stat-label">Attractions</p>
+            </div>
+            <div class="stat animate-fade-up delay-8">
+              <i class="bi bi-geo-alt-fill stat-icon secondary"></i>
+              <p class="stat-value secondary">6</p>
+              <p class="stat-label">Themed Zones</p>
+            </div>
+            <div class="stat animate-fade-up delay-9">
+              <i class="bi bi-people-fill stat-icon primary"></i>
+              <p class="stat-value primary">5M+</p>
+              <p class="stat-label">Happy Visitors</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="featured-zones">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge primary">Explore Our Zones</span>
+        <h2 class="section-title">Our Zones & Attractions</h2>
+        <p class="section-description">
+          Each zone offers unique experiences crafted to create unforgettable memories for
+          visitors of all ages.
+        </p>
+      </div>
+      <div class="grid grid-3">
+        <div class="zone-card animate-fade-up delay-1">
+          <div class="card-icon primary">
+            <i class="bi bi-lightning-charge-fill"></i>
+          </div>
+          <h3 class="card-title">Thrill Zone</h3>
+          <p class="card-text">
+            Heart-pumping roller coasters and extreme rides for adrenaline seekers
+          </p>
+          <div class="zone-card-footer">
+            <span>12 Attractions</span>
+            <a href="./Pages/Attractions.html"> <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="zone-card animate-fade-up delay-2">
+          <div class="card-icon secondary">
+            <i class="bi bi-droplet-fill"></i>
+          </div>
+          <h3 class="card-title">Aqua World</h3>
+          <p class="card-text">
+            Water rides, wave pools, and splash attractions to beat the heat
+          </p>
+          <div class="zone-card-footer">
+            <span>8 Attractions</span>
+            <a href="./Pages/Attractions.html"><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="zone-card animate-fade-up delay-3">
+          <div class="card-icon accent">
+            <i class="bi bi-stars"></i>
+          </div>
+          <h3 class="card-title">Fantasy Kingdom</h3>
+          <p class="card-text">Magical experiences and enchanted rides for the whole family</p>
+          <div class="zone-card-footer">
+            <span>15 Attractions</span>
+            <a href="./Pages/Attractions.html"><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="zone-card animate-fade-up delay-4">
+          <div class="card-icon secondary">
+            <i class="bi bi-tree-fill"></i>
+          </div>
+          <h3 class="card-title">Adventure Forest</h3>
+          <p class="card-text">
+            Nature-themed attractions with rope courses and safari adventures
+          </p>
+          <div class="zone-card-footer">
+            <span>10 Attractions</span>
+            <a href="./Pages/Attractions.html"><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="zone-card animate-fade-up delay-5">
+          <div class="card-icon primary">
+            <i class="bi bi-rocket-takeoff-fill"></i>
+          </div>
+          <h3 class="card-title">Space Station</h3>
+          <p class="card-text">Futuristic rides and cosmic experiences beyond imagination</p>
+          <div class="zone-card-footer">
+            <span>7 Attractions</span>
+            <a href="./Pages/Attractions.html"><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="zone-card animate-fade-up delay-6">
+          <div class="card-icon accent">
+            <i class="bi bi-music-note-beamed"></i>
+          </div>
+          <h3 class="card-title">Party Plaza</h3>
+          <p class="card-text">Live shows, parades, and entertainment throughout the day</p>
+          <div class="zone-card-footer">
+            <span>5 Attractions</span>
+            <a href="./Pages/Attractions.html"><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="./Pages/Attractions.html" class="btn btn-primary btn-lg">
+          View All Attractions <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="restaurants-section" id="restaurants">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">🍽 Dining Experience</span>
+        <h2>Explore Our Restaurants</h2>
+        <p>
+          From family-friendly meals to premium dining, discover flavors
+          waiting for you inside the park.
+        </p>
+      </div>
+      <div class="restaurant-grid">
+        <article class="restaurant-card">
+          <img src="./Assets/Restaurant,menu/3..jpg" alt="Family Diner">
+          <div class="restaurant-content">
+            <h3>Family Diner</h3>
+            <p>Comfort food, kids meals & quick bites for the whole family.</p>
+            <div class="restaurant-meta">
+              <span>👨‍👩‍👧 Family Friendly</span>
+              <span>⏱ 15–20 min</span>
+            </div>
+            <a href="./Pages/menu.html" class="restaurant-btn">
+              View Menu →
+            </a>
+          </div>
+        </article>
+        <article class="restaurant-card featured">
+          <img src="./Assets/Gallery,Attractions,Logo/Thrill Zone 1.jpg" alt="Skyline Grill">
+          <div class="restaurant-content">
+            <span class="featured-badge">Popular</span>
+            <h3>Skyline Grill</h3>
+            <p>Grilled specialties with a panoramic view of the park.</p>
+
+            <div class="restaurant-meta">
+              <span>🔥 Premium Grill</span>
+              <span>🌇 Scenic View</span>
+            </div>
+            <a href="./Pages/restaurant.html" class="restaurant-btn">
+              Explore Our Restaurant →
+            </a>
+          </div>
+        </article>
+        <article class="restaurant-card">
+          <img src="./Assets/Gallery,Attractions,Logo/Ice Cream.jpg" alt="Sweet Street">
+          <div class="restaurant-content">
+            <h3>Sweet Street</h3>
+            <p>Desserts, ice creams, waffles & signature milkshakes.</p>
+            <div class="restaurant-meta">
+              <span>🍨 Desserts</span>
+              <span>❤️ Kids Favorite</span>
+            </div>
+          <a href="./Pages/menu.html" class="restaurant-btn">
+              See Treats →
+            </a>
+          </div>
+        </article>
+      </div>
+      <div class="restaurants-footer">
+        <a href="./Pages/For Html/restaurant.html" class="view-all-btn">
+          View Our Restaurant
+        </a>
+      </div>
+
+    </div>
+  </section>
+  <section class="entertainment-section" id="entertainment">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">🎭 Entertainment</span>
+        <h2>Fun for Every Age</h2>
+        <p>
+          Thrilling rides, live shows, and immersive attractions —
+          explore entertainment zones designed for everyone.
+        </p>
+      </div>
+      <div class="entertainment-grid">
+        <article class="entertainment-card">
+          <img src="./Assets/Gallery,Attractions,Logo/Thril Zone 2.png" alt="Thrill Rides">
+          <div class="entertainment-content">
+            <h3>Thrill Rides</h3>
+            <p>High-speed adventures for adrenaline seekers.</p>
+            <div class="entertainment-meta">
+              <span>🎢 Extreme</span>
+              <span>⚡ Fast</span>
+            </div>
+            <a href="./Pages/entertainment.html" class="entertainment-btn">Explore →</a>
+          </div>
+        </article>
+        <article class="entertainment-card">
+          <img src="./Assets/Gallery,Attractions,Logo/Fantsay Kindogm 15.webp" alt="Family Rides">
+          <div class="entertainment-content">
+            <h3>Family Rides</h3>
+            <p>Fun, safe rides perfect for all age groups.</p>
+            <div class="entertainment-meta">
+              <span>👨‍👩‍👧‍👦 Family</span>
+              <span>🎠 Smooth</span>
+            </div>
+            <a href="./Pages/entertainment.html" class="entertainment-btn">View Rides →</a>
+          </div>
+        </article>
+        <article class="entertainment-card">
+          <img src="./Assets/Gallery,Attractions,Logo/Aqua World 4.jpeg" alt="Kids Zone">
+          <div class="entertainment-content">
+            <h3>Kids Zone</h3>
+            <p>Colorful play areas full of joy and laughter.</p>
+            <div class="entertainment-meta">
+              <span>🧸 Kids</span>
+              <span>🎨 Fun</span>
+            </div>
+            <a href="./Pages/entertainment.html" class="entertainment-btn">Visit Zone →</a>
+          </div>
+        </article>
+        <article class="entertainment-card featured">
+          <img src="./Assets/Gallery,Attractions,Logo/Live show.jpg" alt="Live Shows">
+          <div class="entertainment-content">
+            <span class="featured-badge">Live</span>
+            <h3>Live Shows</h3>
+            <p>Music, magic & cultural performances daily.</p>
+            <div class="entertainment-meta">
+              <span>🎶 Music</span>
+              <span>🎭 Stage</span>
+            </div>
+            <a href="./Pages/entertainment.html" class="entertainment-btn">Show Timings →</a>
+          </div>
+        </article>
+        <article class="entertainment-card">
+          <img src="./Assets/Gallery,Attractions,Logo/ADVENTURE FOREST – Attractions-2.webp" alt="Adventure Arena">
+          <div class="entertainment-content">
+            <h3>Adventure Arena</h3>
+            <p>Climbing, challenges & action-packed activities.</p>
+            <div class="entertainment-meta">
+              <span>🧗 Adventure</span>
+              <span>🔥 Action</span>
+            </div>
+            <a href="./Pages/entertainment.html" class="entertainment-btn">Enter Arena →</a>
+          </div>
+        </article>
+        <article class="entertainment-card">
+          <img src="./Assets/Gallery,Attractions,Logo/Vr.jpg" alt="VR Zone">
+          <div class="entertainment-content">
+            <h3>VR Zone</h3>
+            <p>Experience next-level virtual adventures.</p>
+            <div class="entertainment-meta">
+              <span>🕶 VR</span>
+              <span>🚀 Immersive</span>
+            </div>
+            <a href="./Pages/entertainment.html" class="entertainment-btn">Try VR →</a>
+          </div>
+        </article>
+      </div>
+      <div class="entertainment-footer">
+        <a href="./Pages/entertainment.html" class="view-all-btn">
+          View All Entertainment
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="gallery-preview">
+    <div class="container">
+      <div class="section-header">
+        <h2>Capturing the Moment</h2>
+        <p>Explore our latest photography and visual stories.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="./Assets/Gallery,Attractions,Logo/ADVENTURE FOREST – Attractions-8.jpg" alt="Landscape">
+          <div class="overlay"><span>Landscapes</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="./Assets/Gallery,Attractions,Logo/PARTY PLAZA – Attractions-3.jpg" alt="Portrait">
+          <div class="overlay"><span>Portraits</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="./Assets/Gallery,Attractions,Logo/Fantsay Kindogm 3.jpg" alt="Events">
+          <div class="overlay"><span>Events</span></div>
+        </div>
+      </div>
+      <div class="cta-wrapper">
+        <a href="./Pages/gallery.html" class="gallery-btn">View Full Gallery &rarr;</a>
+      </div>
+    </div>
+  </section>
+  <section class="tickets-cta">
+    <div class="decorative-circle"></div>
+    <div class="decorative-circle"></div>
+
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center">
+        <div class="tickets-cta-content">
+          <span class="section-badge">Special Offers Available</span>
+          <h2>Get Your Tickets Today!</h2>
+          <p>
+            Choose from our flexible ticket options including weekday passes, weekend specials,
+            and family packages. Save more when you book online!
+          </p>
+          <div class="tickets-features">
+            <div class="tickets-feature">
+              <div class="tickets-feature-icon">🎫</div>
+              <span>Flexible Dates</span>
+            </div>
+            <div class="tickets-feature">
+              <div class="tickets-feature-icon">👨‍👩‍👧‍👦</div>
+              <span>Family Packs</span>
+            </div>
+            <div class="tickets-feature">
+              <div class="tickets-feature-icon">⭐</div>
+              <span>VIP Access</span>
+            </div>
+            <div class="tickets-feature">
+              <div class="tickets-feature-icon">⏱️</div>
+              <span>Skip the Line</span>
+            </div>
+          </div>
+          <div class="btn-navbar gap-3 d-flex">
+            <a href="./Pages/booking.html"><button class="btn btn-ticket-2" data-bs-toggle="modal"
+                data-bs-target="#ticketModal">
+                Buy Tickets
+              </button></a>
+            <a href="./Pages/tickets.html"><button class="btn btn-login">View All Prices</button></a>
+          </div>
+        </div>
+        <div class="ticket-card">
+          <div class="ticket-card-header">
+            <div>
+              <p class="ticket-price-label">Starting from</p>
+              <p class="ticket-price">$49</p>
+            </div>
+            <div class="ticket-icon">🎟️</div>
+          </div>
+
+          <div class="ticket-options">
+            <div class="ticket-option"><span>Weekday Pass</span><span>$49</span></div>
+            <div class="ticket-option"><span>Weekend Pass</span><span>$69</span></div>
+            <div class="ticket-option">
+              <span>Family Pack (4)</span><span class="highlight">$179</span>
+            </div>
+          </div>
+          <p class="ticket-note">*All passes include access to all zones</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<section class="testimonials-modern">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Visitor Stories</span>
+      <h2>What Our Guests Say</h2>
+      <p>
+        Real experiences from guests who created unforgettable memories at Mercado Park.
+      </p>
+    </div>
+
+    <div class="testimonial-grid">
+      <!-- Card 1 -->
+      <div class="testimonial-card">
+        <img src="./assets/imgs-for-gallery/Aqib.jpeg" alt="Sarah Johnson">
+        <div class="testimonial-content">
+          <div class="stars">★★★★★</div>
+          <p>
+            The best family day ever! Incredible rides, friendly staff, and unforgettable fun.
+          </p>
+          <h4>Sarah Johnson</h4>
+          <span>Family Visitor</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="testimonial-card">
+        <img src="./Assets/Gallery,Attractions,Logo/Ashir.jpeg" alt="Mike Chen">
+        <div class="testimonial-content">
+          <div class="stars">★★★★★</div>
+          <p>
+            The Thrill Zone is insane! World-class roller coasters and pure adrenaline.
+          </p>
+          <h4>Mike Chen</h4>
+          <span>Thrill Seeker</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="testimonial-card">
+        <img src="./Assets/Gallery,Attractions,Logo/Aqib.jpeg" alt="Emma Williams">
+        <div class="testimonial-content">
+          <div class="stars">★★★★★</div>
+          <p>
+            My daughter’s birthday was magical. Fantasy Kingdom exceeded every expectation!
+          </p>
+          <h4>Emma Williams</h4>
+          <span>Birthday Celebration</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="sitemap-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-badge secondary">Quick Links</span>
+        <h2 class="section-title">Site Map</h2>
+        <p class="section-description">
+          Navigate through Mercado Park with ease using our quick access links.
+        </p>
+      </div>
+      <div class="sitemap-grid">
+        <div class="sitemap-card">
+          <h3>Park</h3>
+          <ul>
+            <li><a href="./Pages/about.html">About Mercado Park</a></li>
+            <li><a href="./Pages/Attractions.html">Attractions</a></li>
+            <li><a href="./Pages/entertainment.html">Events & Shows</a></li>
+            <li><a href="./Pages/restaurant.html">Dining</a></li>
+            <li><a href="./Pages/tickets.html">Shopping</a></li>
+          </ul>
+        </div>
+        <div class="sitemap-card">
+          <h3>Plan Your Visit</h3>
+          <ul>
+            <li><a href="./Pages/tickets.html">Tickets & Pricing</a></li>
+            <li><a href="./Pages/about.html">Park Hours</a></li>
+            <li><a href="./Page/disclaimer.html">Park Map</a></li>
+            <li><a href="./Pages/disclaimer.html">Accessibility</a></li>
+            <li><a href="./Pages/tickets.html">Group Bookings</a></li>
+          </ul>
+        </div>
+        <div class="sitemap-card">
+          <h3>Experiences</h3>
+          <ul>
+            <li><a href="./Pages/Attractions.html">Thrill Rides</a></li>
+            <li><a href="./Pages/Attractions.html">Family Zone</a></li>
+            <li><a href="./Pages/Attractions.html">Fantasy Kingdom</a></li>
+            <li><a href="./Pages/entertainment.html">Seasonal Events</a></li>
+            <li><a href="./Pages/tickets.html">VIP Experiences</a></li>
+          </ul>
+        </div>
+        <div class="sitemap-card">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="./Pages/contact.html">Contact Us</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Safety Guidelines</a></li>
+            <li><a href="#">Lost & Found</a></li>
+            <li><a href="#">Feedback</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="location-map">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-badge accent">Find Us</span>
+        <h2 class="section-title">Mercado Park Location</h2>
+        <p class="section-description">
+          Easily locate Mercado Amusement Park and plan your visit with confidence.
+        </p>
+      </div>
+
+      <div class="map-wrapper">
+        <iframe src="https://www.google.com/maps?q=Mercado%20Amusement%20Park&output=embed" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Logo & About -->
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <img src="./Assets/Gallery,Attractions,Logo/Footer.png" alt="Mercado Park Logo">
+          </a>
+
+          <p class="footer-description">
+            The nation's pride, brought to you by Seth Groups of Companies.
+            45 acres of pure adventure, thrill, and family entertainment.
+          </p>
+
+          <div class="footer-social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-h42">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./Pages/Zones & Attractions.html">Zones & Attractions</a></li>
+            <li><a href="./Pages/restaurant.html">Restaurants</a></li>
+            <li><a href="./Pages/entertainment.html">Entertainment</a></li>
+            <li><a href="./Pages/ticket&prices.html">Tickets & Prices</a></li>
+            <li><a href="./Pages/gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-h41">Information</h4>
+          <ul class="footer-links">
+            <li><a href="./Pages/about.html">About Us</a></li>
+            <li><a href="./Pages/contact.html">Contact Us</a></li>
+            <li><a href="./Pages/disclaimer.html">Disclaimer</a></li>
+            <li><a href="/Pages/contact.html">Sitemap</a></li>
+          </ul>
+        </div>
+        <div class="footer-highlights">
+          <h4 class="footer-h43">Why Visit Mercado?</h4>
+          <ul>
+            <li>🎢 50+ Thrilling Rides</li>
+            <li>🎭 Live Shows & Events</li>
+            <li>🍔 Food Streets & Cafés</li>
+            <li>👨‍👩‍👧 Family & Kids Zones</li>
+            <li>🌙 Night Entertainment</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Mercado Amusement Park. A Seth Groups Company. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="/Pages/disclaimer.html">Privacy Policy</a>
+          <a href="/Pages/disclaimer.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+  <script src="./Pages/app.js"></script>
+</body>
+
+</html>

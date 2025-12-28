@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Booking | Mercado Amusement Park</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@400;600&display=swap"
+    rel="stylesheet">
+  <!-- Favicon Link Here -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/imgs-for-gallery/favicon-32x32.png">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./booking.css">
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="badge">🎟 Secure Booking</span>
+    <h1>Book Your Perfect Park Day</h1>
+    <p>Tickets • Family Packs • Attractions • Offers • Payments</p>
+  </section>
+
+  <!-- STEPS -->
+  <div class="steps">
+    <span class="active">Tickets</span>
+    <span>Add-ons</span>
+    <span>Details</span>
+    <span>Payment</span>
+    <span>Done</span>
+  </div>
+
+  <!-- BOOKING CARD -->
+  <section class="booking">
+    <div class="card">
+
+      <!-- STEP 1: Tickets -->
+      <div class="panel active">
+        <h2>Select Tickets</h2>
+        <div class="row">
+          <span>Pass Type</span>
+          <select id="passType">
+            <option value="auto">Auto Detect (by date)</option>
+            <option value="weekday">Weekday Pass</option>
+            <option value="weekend">Weekend Pass</option>
+            <option value="holiday">🎉 Holiday Pass</option>
+          </select>
+        </div>
+
+        <div class="row"><span>Adult</span>
+          <div class="qty">
+            <button data-t="adult" data-a="dec">−</button>
+            <b id="adult">1</b>
+            <button data-t="adult" data-a="inc">+</button>
+          </div>
+        </div>
+
+        <div class="row"><span>Child</span>
+          <div class="qty">
+            <button data-t="child" data-a="dec">−</button>
+            <b id="child">0</b>
+            <button data-t="child" data-a="inc">+</button>
+          </div>
+        </div>
+
+        <div class="row"><span>Senior (60+)</span>
+          <div class="qty">
+            <button data-t="senior" data-a="dec">−</button>
+            <b id="senior">0</b>
+            <button data-t="senior" data-a="inc">+</button>
+          </div>
+        </div>
+
+        <div class="row family">
+          <span>👨‍👩‍👧‍👦 Family Pack <small>$<span id="familyPrice">159</span></small></span>
+          <div class="qty">
+            <button data-t="family" data-a="dec">−</button>
+            <b id="family">0</b>
+            <button data-t="family" data-a="inc">+</button>
+          </div>
+        </div>
+
+        <div class="price">Subtotal: $<span id="subtotal">49</span></div>
+        <div class="row">
+          <span>Promo Code</span>
+          <input type="text" id="promoCode" placeholder="Enter promo code">
+          <button class="btn outline" id="applyPromo">Apply</button>
+        </div>
+        <button class="btn primary next">Continue</button>
+      </div>
+
+      <!-- STEP 2: Add-ons -->
+      <div class="panel addons-panel">
+        <h2>Add-ons</h2>
+        <div class="addons-grid">
+          <div class="addon-card"><input type="checkbox" id="fastPass" value="30"><label for="fastPass">
+              <h3>🎢 Fast Pass</h3>
+              <p>Skip the lines</p><span>$30</span>
+            </label></div>
+          <div class="addon-card"><input type="checkbox" id="mealDeal" value="25"><label for="mealDeal">
+              <h3>🍔 Meal Deal</h3>
+              <p>Lunch Combo</p><span>$25</span>
+            </label></div>
+          <div class="addon-card"><input type="checkbox" id="vipParking" value="50"><label for="vipParking">
+              <h3>🚘 VIP Parking</h3>
+              <p>Front row parking</p><span>$50</span>
+            </label></div>
+          <div class="addon-card"><input type="checkbox" id="zoneA" value="20"><label for="zoneA">
+              <h3>🗺️ Zone A</h3>
+              <p>Access to Zone A attractions</p><span>$20</span>
+            </label></div>
+          <div class="addon-card"><input type="checkbox" id="entertainmentPack" value="40"><label
+              for="entertainmentPack">
+              <h3>🎭 Entertainment Pack</h3>
+              <p>Shows & Events</p><span>$40</span>
+            </label></div>
+          <div class="addon-card"><input type="checkbox" id="waterRide" value="35"><label for="waterRide">
+              <h3>💦 Water Rides</h3>
+              <p>All-day water ride access</p><span>$35</span>
+            </label></div>
+        </div>
+
+        <div class="price-details">
+          <h4>💰 Price Breakdown</h4>
+          <ul>
+            <li>Adults <span>$<b id="pAdult">0</b></span></li>
+            <li>Children <span>$<b id="pChild">0</b></span></li>
+            <li>Seniors <span>$<b id="pSenior">0</b></span></li>
+            <li>Family Packs <span>$<b id="pFamily">0</b></span></li>
+            <li>Add-ons <span>$<b id="pAddons">0</b></span></li>
+            <li>Promo Discount <span>-$<b id="pPromo">0</b></span></li>
+          </ul>
+          <div class="total-line">Total <span>$<b id="total2">0</b></span></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn outline back">Back</button>
+          <button class="btn primary next">Continue</button>
+        </div>
+      </div>
+
+      <!-- STEP 3: Visitor Details -->
+      <div class="panel">
+        <h2>Visitor Details</h2>
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="email" id="email" placeholder="Email Address">
+        <input type="tel" id="phone" placeholder="Phone Number">
+        <input type="date" id="date">
+        <div class="actions">
+          <button class="btn outline back">Back</button>
+          <button class="btn primary next">Continue</button>
+        </div>
+      </div>
+
+      <!-- STEP 4: Payment -->
+      <div class="panel">
+        <h2>Payment</h2>
+        <div class="payment-methods">
+          <label><input type="radio" name="pay" value="card" checked> 💳 Credit / Debit Card</label>
+          <label><input type="radio" name="pay" value="qr"> QR Code </label>
+        </div>
+
+        <div id="cardDetailsSection">
+          <h3>Card Payment</h3>
+          <div class="card-field"><label>Card Number</label><input type="text" id="cardNumber"
+              placeholder="1234 5678 9012 3456" maxlength="19"></div>
+          <div class="card-row">
+            <div class="card-field"><label>Expiry</label><input type="text" id="cardExpiry" placeholder="MM/YY"
+                maxlength="5"></div>
+            <div class="card-field"><label>CVV</label><input type="password" id="cardCVV" placeholder="123"
+                maxlength="3"></div>
+          </div>
+          <div class="card-field"><label>Cardholder Name</label><input type="text" id="cardName"
+              placeholder="Your Name"></div>
+        </div>
+
+        <div id="qrCodeSection">
+          <h3>Scan this QR to Pay</h3>
+          <div id="qrContainer"></div>
+          <p>Payment will be confirmed automatically in 6 seconds.</p>
+        </div>
+
+        <div class="payment-status" id="paymentStatus">
+          <span class="loader"></span>
+          <p id="paymentMessage">Waiting for payment…</p>
+        </div>
+
+        <button class="btn primary pay">Pay & Confirm</button>
+      </div>
+
+      <!-- STEP 5: Done -->
+      <div class="panel done">
+        <div class="success">✓</div>
+        <h2>Booking Confirmed</h2>
+        <p>Tickets have been sent to <span id="userEmail"></span></p>
+        <h3>$<span id="final">0</span></h3>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- QR Code -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <!-- Main JS -->
+  <script src="./booking.js"></script>
+</body>
+
+</html>

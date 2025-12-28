@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant | Mercado</title>
+    <!-- Boostrap Icon Cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Boostrap CDN CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  <!-- Favicon Link Here -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../Assets/Gallery,Attractions,Logo/favicon-32x32.png">
+    <!-- Styling CSS -->
+    <link rel="stylesheet" href="./restaurant.css" />
+  </head>
+  <body>
+  <nav class="nav-bar container-fluid ">
+    <div class="d-flex align-items-center justify-content-between w-100">
+      <a href="/index.html" class="logo-navbar fw-bold"><img
+          src="../Assets/Gallery,Attractions,Logo/Logo Of Nav.png" alt="" class="img-fluid"></a>
+      <div class="hamburger d-lg-none" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-items justify-content-center gap-4 d-none d-lg-flex m-0 p-0">
+        <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About us</a></li>
+                <li><a href="./tickets.html">Ticket & Prices</a></li>
+
+        <li><a href="./entertainment.html">Entertainment</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./contact.html">Contact us</a></li>
+        <li><a href="./disclaimer.html">Disclaimer</a></li>
+      </ul>
+  
+      <!-- Buttons -->
+      <div class="btn-navbar gap-3 d-none d-lg-flex">
+        <button class="btn btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">
+          Account
+        </button>
+    <a href="./booking.html"><button class="btn btn-ticket">
+      Buy Tickets
+    </button></a>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="btn-close text-white mb-4" id="closeMenu"></button>
+      <ul class="flex-column d-flex gap-3">
+        <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About us</a></li>
+                <li><a href="./tickets.html">Ticket & Prices</a></li>
+
+        <li><a href="./entertainment.html">Entertainment</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./contact.html">Contact us</a></li>
+        <li><a href="./disclaimer.html">Disclaimer</a></li>
+        <li>
+          <button class="btn btn-login w-100 mb-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Account
+          </button>
+        </li>
+        <li>
+   <a href="./booking.html"><button class="btn btn-ticket w-100" >
+    Buy Tickets
+  </button></a>
+        </li>
+      </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+  </nav>
+  <div class="modal fade" id="loginModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h5 class="modal-title">Login to Your Account</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <label>Email Address</label>
+            <input type="email" class="form-control mb-3" placeholder="Enter email" />
+            <label>Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Enter password" />
+            <button class="btn btn-ticket w-100">Login</button>
+          </form>
+          <div class="text-center mt-3">
+            <small>Don't have an account?
+              <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#signupModal">Create One</a>
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="signupModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h5 class="modal-title">Create Your Account</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <label>Full Name</label>
+            <input type="text" class="form-control mb-3" placeholder="Full name" />
+            <label>Email Address</label>
+            <input type="email" class="form-control mb-3" placeholder="Email" />
+            <label>Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Password" />
+            <label>Confirm Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Confirm password" />
+            <button class="btn btn-ticket w-100">Create Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="hero-circle circle1"></div>
+        <div class="hero-circle circle2"></div>
+        <div class="hero-circle circle3"></div>
+        <div class="hero-circle circle4"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-row">
+          <div class="hero-content">
+            <div class="hero-badge mb-3 animate-fade-up delay-1">
+              <i class="bi bi-stars"></i>
+              <span>The Nation's Premier Theme Park</span>
+            </div>
+
+            <h1 class="animate-fade-up delay-2">Welcome to <span>Mercado Restaurant</span></h1>
+
+            <p class="hero-subtitle animate-fade-up delay-3">
+              45 acres of thrilling adventures await you
+            </p>
+
+            <p class="hero-description animate-fade-up delay-4">
+              Created by Seth Groups of Companies over 5 years of meticulous development. Experience
+              world-class attractions, dining, and entertainment that has made us the nation's
+              pride.
+            </p>
+
+         <div class="hero-buttons animate-fade-up delay-5">
+  <button 
+    class="btn hero-reserve-btn"
+    data-bs-toggle="modal" 
+    data-bs-target="#reserveModal"
+  >
+    <i class="bi bi-ticket-perforated-fill me-2"></i> Reserve Your Seats
+  </button>
+    <a href="./menu.html" class="btn btn-outline btn-xl">
+                <i class="bi bi-play-btn-fill me-2"></i> View the Menu
+              </a>
+            </div>
+</div>
+<div class="modal fade" id="reserveModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content reserve-modal">
+      <div class="modal-header">
+        <h5 class="modal-title">Table Reservation</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <form>
+              <input class="form-control mb-3" placeholder="Full Name">
+              <input class="form-control mb-3" type="email" placeholder="Email">
+              <input class="form-control mb-3" type="date">
+              <input class="form-control mb-3" type="time">
+              <input class="form-control mb-3" type="number" placeholder="Guests">
+
+              <button class="confirm-btn w-100 mt-2">Confirm Reservation</button>
+            </form>
+          </div>
+
+          <!-- Seat Map -->
+          <div class="col-md-6">
+            <h6 class="text-center mb-3 text-dark">Select Your Seat</h6>
+            <div class="seat-map">
+              <div class="seat" onclick="selectSeat(this)">A1</div>
+              <div class="seat" onclick="selectSeat(this)">A2</div>
+              <div class="seat" onclick="selectSeat(this)">A3</div>
+              <div class="seat reserved">A4</div>
+
+              <div class="seat" onclick="selectSeat(this)">B1</div>
+              <div class="seat" onclick="selectSeat(this)">B2</div>
+              <div class="seat reserved">B3</div>
+              <div class="seat" onclick="selectSeat(this)">B4</div>
+            </div>
+            <p class="text-center mt-3 small text-dark">🟢 Available &nbsp; 🔴 Reserved</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+            <div class="hero-stats mt-5">
+              <div class="stat animate-fade-up delay-6">
+                <i class="bi bi-tree-fill stat-icon primary"></i>
+                <p class="stat-value primary">45+</p>
+                <p class="stat-label">Acres of Fun</p>
+              </div>
+              <div class="stat animate-fade-up delay-7">
+                <i class="bi bi-stars stat-icon accent"></i>
+                <p class="stat-value accent">50+</p>
+                <p class="stat-label">Attractions</p>
+              </div>
+              <div class="stat animate-fade-up delay-8">
+                <i class="bi bi-geo-alt-fill stat-icon secondary"></i>
+                <p class="stat-value secondary">6</p>
+                <p class="stat-label">Themed Zones</p>
+              </div>
+              <div class="stat animate-fade-up delay-9">
+                <i class="bi bi-people-fill stat-icon primary"></i>
+                <p class="stat-value primary">5M+</p>
+                <p class="stat-label">Happy Visitors</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Our Restaurants</h2>
+        <div class="row g-4 mt-4">
+          <div class="col-md-4">
+            <div class="food-card">
+              <i class="bi bi-egg-fried"></i>
+              <h4>Family Diner</h4>
+              <p>Comfort meals crafted for all age groups.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="food-card">
+              <i class="bi bi-cup-hot"></i>
+              <h4>Café Mercado</h4>
+              <p>Premium coffee, desserts &</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="food-card">
+              <i class="bi bi-fire"></i>
+              <h4>Grill House</h4>
+              <p>Smoky grills, burgers & signature steaks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section soft-bg">
+      <div class="container">
+        <h2 class="section-title">Signature Menu</h2>
+        <div class="row g-4 mt-4">
+          <div class="col-md-6">
+            <div class="menu-card">
+              <h4>🍔 Main Course</h4>
+              <div class="menu-item"><span>Classic Burger</span><span>$8</span></div>
+              <div class="menu-item"><span>Grilled Steak</span><span>$15</span></div>
+              <div class="menu-item"><span>Chicken Alfredo</span><span>$12</span></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-card">
+              <h4>☕ Café & Desserts</h4>
+              <div class="menu-item"><span>Cappuccino</span><span>$4</span></div>
+              <div class="menu-item"><span>Chocolate Lava Cake</span><span>$6</span></div>
+              <div class="menu-item"><span>Ice Cream Sundae</span><span>$5</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 mt-4">
+          <div class="col-md-6">
+            <div class="menu-card">
+              <h4>🌮 Hot-Tacoses</h4>
+              <div class="menu-item"><span>Classic Burger</span><span>$8</span></div>
+              <div class="menu-item"><span>Grilled Steak</span><span>$15</span></div>
+              <div class="menu-item"><span>Chicken Alfredo</span><span>$12</span></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-card">
+              <h4>🍕 Pizzeria</h4>
+              <div class="menu-item"><span>Hot Tikka</span><span>$4</span></div>
+              <div class="menu-item"><span>Lava Chessy Pizza</span><span>$6</span></div>
+              <div class="menu-item"><span>Afghani Boti</span><span>$5</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 mt-4">
+          <div class="col-md-6">
+            <div class="menu-card">
+              <h4>🍝 PASTA & NOODLES</h4>
+              <div class="menu-item"><span>Alfredo Pasta (Veg / Chicken)</span><span>$8</span></div>
+              <div class="menu-item"><span>Arrabiata Pasta</span><span>$15</span></div>
+              <div class="menu-item"><span>Spaghetti Bolognese</span><span>$12</span></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-card">
+              <h4>🍹 MOCKTAILS</h4>
+              <div class="menu-item"><span>Mint Margarita</span><span>$4</span></div>
+              <div class="menu-item"><span>Blue Lagoon</span><span>$6</span></div>
+              <div class="menu-item"><span>Virgin Pina Colada</span><span>$5</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Chef’s Specials 👨‍🍳</h2>
+
+<div class="row g-4 mt-4">
+  <div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="menu-img-card">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="">
+      <div class="card-body">
+        <h5>Signature Burger</h5>
+        <p>Juicy beef patty with chef’s secret sauce</p>
+
+        <div class="card-footer">
+          <span class="price">$9</span>
+          <button class="order-btn">
+            Order Now
+          </button>
+        </div>
+
+        <div class="rating">
+          <i class="star" onclick="rate(this)">★</i>
+          <i class="star" onclick="rate(this)">★</i>
+          <i class="star" onclick="rate(this)">★</i>
+          <i class="star" onclick="rate(this)">★</i>
+          <i class="star" onclick="rate(this)">★</i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="menu-img-card">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="">
+      <div class="card-body">
+        <h5>Grilled Steak</h5>
+        <p>Perfectly grilled premium beef steak</p>
+
+        <div class="card-footer">
+          <span class="price">$18</span>
+          <button class="order-btn">
+            Order Now
+          </button>
+        </div>
+
+        <div class="rating">
+          <i class="star" onclick="rate(this)">★</i>
+          <i class="star" onclick="rate(this)">★</i>
+          <i class="star" onclick="rate(this)">★</i>
+          <i class="star" onclick="rate(this)">★</i>
+          <i class="star" onclick="rate(this)">★</i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="menu-img-card">
+      <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe" alt="">
+      <div class="card-body">
+        <h5>Chef’s Pasta</h5>
+        <p>Creamy pasta with fresh herbs & parmesan</p>
+
+        <div class="card-footer">
+          <span class="price">$14</span>
+          <button class="order-btn">
+            Order Now
+          </button>
+        </div>
+
+        <div class="rating">
+          <i class="star" onclick="rate(this)">★</i>
+          <i class="star" onclick="rate(this)">★</i>
+          <i class="star" onclick="rate(this)">★</i>
+          <i class="star" onclick="rate(this)">★</i>
+          <i class="star" onclick="rate(this)">★</i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section journey-section">
+  <div class="container">
+    <h2 class="section-title">Your Dining Journey ✨</h2>
+
+    <div class="row g-4 mt-5">
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="journey-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Arrival">
+          <h5>Arrival</h5>
+          <p>Warm welcome & beautiful ambiance</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="journey-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1830/1830839.png" alt="Seating">
+          <h5>Seating</h5>
+          <p>Comfortable seating & calm vibes</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="journey-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Dining">
+          <h5>Dining</h5>
+          <p>Delicious food crafted with love and joy</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="journey-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/3050/3050525.png" alt="Memories">
+          <h5>Memories</h5>
+          <p>Moments you’ll always remember</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Inside Mercado 🍷</h2>
+        <div class="row g-3 mt-4">
+          <div class="col-md-4">
+            <img
+              class="gallery-img"
+              src="https://images.unsplash.com/photo-1559339352-11d035aa65de"
+            />
+          </div>
+          <div class="col-md-4">
+            <img
+              class="gallery-img"
+              src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5"
+            />
+          </div>
+          <div class="col-md-4">
+            <img
+              class="gallery-img"
+              src="https://images.unsplash.com/photo-1528605248644-14dd04022da1"
+            />
+          </div>
+          <div class="col-md-4">
+            <img class="gallery-img" src="../Assets/Restaurant,menu/1..jpg" />
+          </div>
+          <div class="col-md-4">
+            <img class="gallery-img" src="../Assets/Restaurant,menu/2..jpg" />
+          </div>
+          <div class="col-md-4">
+            <img class="gallery-img" src="../Assets/Restaurant,menu/3..jpg" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section soft-bg">
+      <div class="container">
+        <h2 class="section-title">What Guests Say 💬</h2>
+        <div class="row g-4 mt-4">
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <p>“Amazing food and beautiful ambiance. A must-visit!”</p>
+              <h6>— Sarah K.</h6>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <p>“Best dining experience inside an amusement park.”</p>
+              <h6>— Ahmed R.</h6>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <p>“Perfect for families and food lovers.”Perfect for families</p>
+              <h6>— Maria L.</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="section features-section">
+  <div class="container">
+    <h2 class="section-title">Why Dine With Us?</h2>
+
+    <div class="row g-4 mt-5">
+
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="feature-card">
+          <span class="feature-icon">🍴</span>
+          <h5>Fresh Food</h5>
+          <p>Daily sourced ingredients & chef-crafted meals</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="feature-card">
+          <span class="feature-icon">⏱</span>
+          <h5>Fast Service</h5>
+          <p>Quick orders without compromising quality</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="feature-card">
+          <span class="feature-icon">⭐</span>
+          <h5>Premium Quality</h5>
+          <p>Exceptional taste & top-tier ingredients</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="feature-card">
+          <span class="feature-icon">👨‍👩‍👧</span>
+          <h5>Family Friendly</h5>
+          <p>A warm place for moments that matter</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cta-section">
+  <div class="cta-overlay"></div>
+
+  <div class="container text-center position-relative">
+    <h2>Reserve Your Experience</h2>
+    <p>Good food, great memories & unforgettable moments.</p>
+
+    <button
+      class="cta-btn"
+      data-bs-toggle="modal"
+      data-bs-target="#reserveModal"
+    >
+      🍽 Reserve Now
+    </button>
+  </div>
+</section>
+<div class="modal fade" id="reserveModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content reserve-modal">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Table Reservation</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <form>
+              <input class="form-control mb-3" placeholder="Full Name">
+              <input class="form-control mb-3" type="email" placeholder="Email">
+              <input class="form-control mb-3" type="date">
+              <input class="form-control mb-3" type="time">
+              <input class="form-control mb-3" type="number" placeholder="Guests">
+
+              <button class="confirm-btn w-100 mt-2">
+                Confirm Reservation
+              </button>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <h6 class="text-center mb-3">Select Your Seat</h6>
+            <div class="seat-map">
+              <div class="seat" onclick="selectSeat(this)">A1</div>
+              <div class="seat" onclick="selectSeat(this)">A2</div>
+              <div class="seat" onclick="selectSeat(this)">A3</div>
+              <div class="seat reserved">A4</div>
+
+              <div class="seat" onclick="selectSeat(this)">B1</div>
+              <div class="seat" onclick="selectSeat(this)">B2</div>
+              <div class="seat reserved">B3</div>
+              <div class="seat" onclick="selectSeat(this)">B4</div>
+            </div>
+            <p class="text-center mt-3 small">
+              🟢 Available &nbsp; 🔴 Reserved
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">
+          <img src="../Assets/Gallery,Attractions,Logo/Footer.png" alt="Mercado Park Logo">
+        </a>
+
+        <p class="footer-description">
+          The nation's pride, brought to you by Seth Groups of Companies.
+          45 acres of pure adventure, thrill, and family entertainment.
+        </p>
+
+        <div class="footer-social">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="footer-h42">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="./Attractions.html">Zones & Attractions</a></li>
+          <li><a href="./restaurant.html">Restaurants</a></li>
+          <li><a href="./entertainment.html">Entertainment</a></li>
+          <li><a href="./ticket&prices.html">Tickets & Prices</a></li>
+          <li><a href="./gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+
+      <!-- Information -->
+      <div>
+        <h4 class="footer-h41">Information</h4>
+        <ul class="footer-links">
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+          <li><a href="./disclaimer.html">Disclaimer</a></li>
+          <li><a href="/index.html">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <!-- NEW SECTION: Park Highlights -->
+      <div class="footer-highlights">
+        <h4>Why Visit Mercado?</h4>
+        <ul>
+          <li>🎢 50+ Thrilling Rides</li>
+          <li>🎭 Live Shows & Events</li>
+          <li>🍔 Food Streets & Cafés</li>
+          <li>👨‍👩‍👧 Family & Kids Zones</li>
+          <li>🌙 Night Entertainment</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>© 2024 Mercado Amusement Park. A Seth Groups Company. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="disclaimer.html">Privacy Policy</a>
+        <a href="disclaimer.html">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./restaurant.js"></script>
+  </body>
+</html>
