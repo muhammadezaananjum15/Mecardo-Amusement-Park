@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attractions | Mercado Amusement Park</title>
+  <!-- Boostrap Icon Cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Boostrap CDN CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Favicon Link Here -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../Assets/Gallery,Attractions,Logo/favicon-32x32.png">
+  <!-- Styling CSS -->
+  <link rel="stylesheet" href="./attractions.css" />
+</head>
+
+<body>
+  <!-- ================= NAVBAR ================= -->
+  <nav class="nav-bar container-fluid ">
+    <div class="d-flex align-items-center justify-content-between w-100">
+      <!-- Logo -->
+      <a href="/index.html" class="logo-navbar fw-bold"><img
+          src="../Assets/Gallery,Attractions,Logo/Logo Of Nav.png" alt="" class="img-fluid"></a>
+
+      <!-- Hamburger -->
+      <div class="hamburger d-lg-none" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Nav Items -->
+      <ul class="nav-items justify-content-center gap-3 d-none d-lg-flex m-0 p-0">
+        <li><a href="./about.html">About us</a></li>
+        <li><a href="./tickets.html">Ticket & Prices</a></li>
+        <li><a href="./entertainment.html">Entertainment</a></li>
+        <li><a href="./restaurant.html">Restaurants</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./contact.html">Contact us</a></li>
+        <li><a href="./disclaimer.html">Disclaimer</a></li>
+      </ul>
+
+      <!-- Buttons -->
+      <div class="btn-navbar gap-3 d-none d-lg-flex">
+        <button class="btn btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">
+          Account
+        </button>
+        <a href="./booking.html"><button class="btn btn-ticket">
+            Buy Tickets
+          </button></a>
+      </div>
+    </div>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="btn-close text-white mb-4" id="closeMenu"></button>
+      <ul class="flex-column d-flex gap-3">
+        <li><a href="./about.html">About us</a></li>
+        <li><a href="./tickets.html">Ticket & Prices</a></li>
+        <li><a href="./entertainment.html">Entertainment</a></li>
+        <li><a href="./restaurant.html">Restaurants</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./contact.html">Contact us</a></li>
+        <li><a href="./disclaimer.html">Disclaimer</a></li>
+        <li>
+          <button class="btn btn-login w-100 mb-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Account
+          </button>
+        </li>
+        <li>
+          <a href="./booking.html"><button class="btn btn-ticket w-100">
+              Buy Tickets
+            </button></a>
+        </li>
+      </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+  </nav>
+
+  <!-- ================= LOGIN MODAL ================= -->
+  <div class="modal fade" id="loginModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h5 class="modal-title">Login to Your Account</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <label>Email Address</label>
+            <input type="email" class="form-control mb-3" placeholder="Enter email" />
+            <label>Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Enter password" />
+            <button class="btn btn-ticket w-100">Login</button>
+          </form>
+          <div class="text-center mt-3">
+            <small>Don't have an account?
+              <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#signupModal">Create One</a>
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================= LOGIN MODAL ================= -->
+  <div class="modal fade" id="loginModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h5 class="modal-title">Login to Your Account</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <label>Email Address</label>
+            <input type="email" class="form-control mb-3" placeholder="Enter email" />
+            <label>Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Enter password" />
+            <button class="btn btn-ticket w-100">Login</button>
+          </form>
+          <div class="text-center mt-3">
+            <small>Don't have an account?
+              <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#signupModal">Create One</a>
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SIGN-UP MODAL ================= -->
+  <div class="modal fade" id="signupModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h5 class="modal-title">Create Your Account</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <label>Full Name</label>
+            <input type="text" class="form-control mb-3" placeholder="Full name" />
+            <label>Email Address</label>
+            <input type="email" class="form-control mb-3" placeholder="Email" />
+            <label>Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Password" />
+            <label>Confirm Password</label>
+            <input type="password" class="form-control mb-3" placeholder="Confirm password" />
+            <button class="btn btn-ticket w-100">Create Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- ================= FILTER BUTTONS ================= -->
+  <div class="container my-5 mt-5">
+    <div class="filter-btns text-center">
+      <button class="filter-btn active mt-5" data-filter="all">All</button>
+      <button class="filter-btn mt-5" data-filter="thrill">Thrill Zone</button>
+      <button class="filter-btn mt-5" data-filter="aqua">Aqua World</button>
+      <button class="filter-btn mt-5" data-filter="fantasy">Fantasy Kingdom</button>
+      <button class="filter-btn mt-5" data-filter="adventure">Adventure Forest</button>
+      <button class="filter-btn mt-5" data-filter="space">Space Station</button>
+      <button class="filter-btn mt-5" data-filter="party">Party Plaza</button>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- ================= THRILL ZONE (7) ================= -->
+    <div class="zone-section filter-item thrill">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 id="ThrillZone">Free Fall Tower</h2>
+          <p>Experience a heart-stopping vertical drop from extreme heights.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Thrill Zone 1.jpg" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item thrill reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Mega Loop Coaster</h2>
+          <p>High-speed loops and twists designed for adrenaline lovers.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Thril Zone 2.png" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item thrill">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Sky Swing</h2>
+          <p>Soar through the sky while enjoying breathtaking views.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Thrill Zone 3.png" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item thrill reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Extreme Spin</h2>
+          <p>Spin, flip, and rotate at lightning-fast speeds.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Thrill Zone 4.png" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item thrill">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Drop Zone</h2>
+          <p>A sudden drop ride that will test your courage.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Thrill Zone 5.png" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item thrill reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Fire Track</h2>
+          <p>Race along fiery tracks with sudden accelerations.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Thrill Zone 6.jpg" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item thrill">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Thunder Wheel</h2>
+          <p>A giant rotating wheel with thrilling movements.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Thrill Zone 7.png" class="zone-img"></div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ================= AQUA WORLD (7) ================= -->
+    <div class="zone-section filter-item aqua reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Wave Pool</h2>
+          <p>Enjoy ocean-like waves in a safe water environment.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Aqua World 1.jpg" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item aqua">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Lazy River</h2>
+          <p>Relax and float peacefully through scenic waters.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Aqua World 2.webp" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item aqua reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Tornado Slide</h2>
+          <p>Twisting water slide with powerful splashes.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Aqua World 3.jpeg" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item aqua">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Aqua Racer</h2>
+          <p>Race your friends on parallel water slides.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Aqua World 4.jpeg" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item aqua reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Water Coaster</h2>
+          <p>A thrilling coaster ride mixed with water fun.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Aqua World 5.png" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item aqua">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Splash Zone</h2>
+          <p>Perfect play area with fountains and splash pads.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Aqua World 7.jpeg" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item aqua reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Kids Pool</h2>
+          <p>Safe and fun shallow pool for kids.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Aqua World 8.jpg" class="zone-img"></div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- ================= FANTASY, ADVENTURE, SPACE, PARTY ================= -->
+    <div class="zone-section filter-item fantasy">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Free Fall Tower</h2>
+          <p>Experience a heart-stopping vertical drop from extreme heights.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Fantsay Kindogm 1.jpg" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item fantasy reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Mega Loop Coaster</h2>
+          <p>High-speed loops and twists designed for adrenaline lovers.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Fantsay Kindogm 2.jpeg" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item fantasy">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Sky Swing</h2>
+          <p>Soar through the sky while enjoying breathtaking views.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Fantsay Kindogm 3.jpg" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item fantasy reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Extreme Spin</h2>
+          <p>Spin, flip, and rotate at lightning-fast speeds.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Fantsay Kindogm 4.jpeg" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item fantasy">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Drop Zone</h2>
+          <p>A sudden drop ride that will test your courage.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Fantsay Kindogm 5.jpeg" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item fantasy reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Fire Track</h2>
+          <p>Race along fiery tracks with sudden accelerations.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Fantsay Kindogm 6.jpeg" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item fantasy">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Thunder Wheel</h2>
+          <p>A giant rotating wheel with thrilling movements.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Fantsay Kindogm 7.webp" class="zone-img"></div>
+      </div>
+    </div>
+
+
+    <div class="zone-section filter-item fantasy reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Wave Pool</h2>
+          <p>Enjoy ocean-like waves in a safe water environment.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Fantsay Kindogm 8.png" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item fantasy">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Lazy River</h2>
+          <p>Relax and float peacefully through scenic waters.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Fantsay Kindogm 9.jpeg" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item fantasy reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Tornado Slide</h2>
+          <p>Twisting water slide with powerful splashes.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Fantsay Kindogm 10.jpeg" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item fantasy">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Aqua Racer</h2>
+          <p>Race your friends on parallel water slides.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Fantsay Kindogm 11.jpg" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item fantasy reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Water Coaster</h2>
+          <p>A thrilling coaster ride mixed with water fun.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Fantsay Kindogm 12.jpg" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item fantasy">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Splash Zone</h2>
+          <p>Perfect play area with fountains and splash pads.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Fantsay Kindogm 13.jpg" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item fantasy reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Kids Pool</h2>
+          <p>Safe and fun shallow pool for kids.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Fantsay Kindogm 14.jpeg" class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item fantasy">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Splash Zone</h2>
+          <p>Perfect play area with fountains and splash pads.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/Fantsay Kindogm 15.webp" class="zone-img"></div>
+      </div>
+    </div>
+
+
+
+    <!-- (Already very long – structure continues exactly same pattern) -->
+    <div class="zone-section filter-item adventure">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Free Fall Tower</h2>
+          <p>Experience a heart-stopping vertical drop from extreme heights.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/ADVENTURE FOREST – Attractions-1.jpg" class="zone-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item adventure reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Mega Loop Coaster</h2>
+          <p>High-speed loops and twists designed for adrenaline lovers.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/ADVENTURE FOREST – Attractions-2.webp"
+            class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item adventure">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Sky Swing</h2>
+          <p>Soar through the sky while enjoying breathtaking views.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/ADVENTURE FOREST – Attractions-3.jpeg"
+            class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item adventure reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Extreme Spin</h2>
+          <p>Spin, flip, and rotate at lightning-fast speeds.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/ADVENTURE FOREST – Attractions-4.jpeg"
+            class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item adventure">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Drop Zone</h2>
+          <p>A sudden drop ride that will test your courage.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/ADVENTURE FOREST – Attractions-5.jpeg"
+            class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item adventure reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Fire Track</h2>
+          <p>Race along fiery tracks with sudden accelerations.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/ADVENTURE FOREST – Attractions-6.jpeg"
+            class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item adventure">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Thunder Wheel</h2>
+          <p>A giant rotating wheel with thrilling movements.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/ADVENTURE FOREST – Attractions-7.jpg" class="zone-img">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="zone-section filter-item adventure reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Wave Pool</h2>
+          <p>Enjoy ocean-like waves in a safe water environment.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/ADVENTURE FOREST – Attractions-8.jpg" class="zone-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item adventure">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Lazy River</h2>
+          <p>Relax and float peacefully through scenic waters.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/ADVENTURE FOREST – Attractions-9.webp"
+            class="zone-img"></div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item adventure reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Tornado Slide</h2>
+          <p>Twisting water slide with powerful splashes.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/ADVENTURE FOREST – Attractions-10.jpeg"
+            class="zone-img"></div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- ---------------------------------------------------------------------------- -->
+    <div class="zone-section filter-item space">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Free Fall Tower</h2>
+          <p>Experience a heart-stopping vertical drop from extreme heights.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/SPACE STATION – Attractions-1.jpg" class="zone-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item space reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Mega Loop Coaster</h2>
+          <p>High-speed loops and twists designed for adrenaline lovers.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/SPACE STATION – Attractions-2.jpg" class="zone-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item space">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Sky Swing</h2>
+          <p>Soar through the sky while enjoying breathtaking views.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/SPACE STATION – Attractions-3.jpg" class="zone-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item space reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Extreme Spin</h2>
+          <p>Spin, flip, and rotate at lightning-fast speeds.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/SPACE STATION – Attractions-4.jpeg" class="zone-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item space">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Drop Zone</h2>
+          <p>A sudden drop ride that will test your courage.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/SPACE STATION – Attractions-5.webp" class="zone-img">
+        </div>
+      </div>
+    </div>
+    <!-- -------------------------------------------------------------------------- -->
+    <div class="zone-section filter-item party">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Free Fall Tower</h2>
+          <p>Experience a heart-stopping vertical drop from extreme heights.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/PARTY PLAZA – Attractions-1.webp" class="zone-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item party reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Mega Loop Coaster</h2>
+          <p>High-speed loops and twists designed for adrenaline lovers.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/PARTY PLAZA – Attractions-2.webp" class="zone-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item party">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Sky Swing</h2>
+          <p>Soar through the sky while enjoying breathtaking views.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/PARTY PLAZA – Attractions-3.jpg" class="zone-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item party reverse">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Extreme Spin</h2>
+          <p>Spin, flip, and rotate at lightning-fast speeds.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/PARTY PLAZA – Attractions-4.jpeg" class="zone-img">
+        </div>
+      </div>
+    </div>
+
+    <div class="zone-section filter-item party">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Drop Zone</h2>
+          <p>A sudden drop ride that will test your courage.</p>
+          <a class="zone-btn">Book Now</a>
+        </div>
+        <div class="col-lg-6"><img src="../Assets/Gallery,Attractions,Logo/PARTY PLAZA – Attractions-5.jpg" class="zone-img">
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------------------------------------------------------------------------- -->
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Logo & About -->
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <img src="../Assets/Gallery,Attractions,Logo/Footer.png" alt="Mercado Park Logo">
+          </a>
+
+          <p class="footer-description">
+            The nation's pride, brought to you by Seth Groups of Companies.
+            45 acres of pure adventure, thrill, and family entertainment.
+          </p>
+
+          <div class="footer-social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-h42">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./Attractions.html">Zones & Attractions</a></li>
+            <li><a href="./restaurant.html">Restaurants</a></li>
+            <li><a href="./entertainment.html">Entertainment</a></li>
+            <li><a href="./ticket&prices.html">Tickets & Prices</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-h41">Information</h4>
+          <ul class="footer-links">
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a href="./disclaimer.html">Disclaimer</a></li>
+            <li><a href="/index.html">Sitemap</a></li>
+          </ul>
+        </div>
+        <div class="footer-highlights">
+          <h4 class="footer-h43">Why Visit Mercado?</h4>
+          <ul>
+            <li>🎢 50+ Thrilling Rides</li>
+            <li>🎭 Live Shows & Events</li>
+            <li>🍔 Food Streets & Cafés</li>
+            <li>👨‍👩‍👧 Family & Kids Zones</li>
+            <li>🌙 Night Entertainment</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Mercado Amusement Park. A Seth Groups Company. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="./disclaimer.html">Privacy Policy</a>
+          <a href="./disclaimer.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Boostrap Java Script CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+  <!-- Java Script Linking -->
+  <script src="./attractions.js"></script>
+</body>
+
+</html>
