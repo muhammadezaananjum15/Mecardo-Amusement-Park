@@ -3,17 +3,21 @@ const mobileMenu = document.getElementById('mobileMenu');
 const closeMenu = document.getElementById('closeMenu');
 const overlay = document.getElementById('overlay');
 
-hamburger.addEventListener('click', () => {
+/* OPEN MENU */
+function openMenu() {
   mobileMenu.classList.add('active');
   overlay.classList.add('active');
-});
+  hamburger.classList.add('hide');
+}
 
-closeMenu.addEventListener('click', () => {
+/* CLOSE MENU */
+function closeMenuHandler() {
   mobileMenu.classList.remove('active');
   overlay.classList.remove('active');
-});
+  hamburger.classList.remove('hide');
+}
 
-overlay.addEventListener('click', () => {
-  mobileMenu.classList.remove('active');
-  overlay.classList.remove('active');
-});
+/* EVENTS */
+hamburger.addEventListener('click', openMenu);
+closeMenu.addEventListener('click', closeMenuHandler);
+overlay.addEventListener('click', closeMenuHandler);

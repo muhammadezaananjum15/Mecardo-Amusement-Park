@@ -3,14 +3,14 @@
 // =======================
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
-const closeMenu = document.getElementById('closeMenu');
 const overlay = document.getElementById('overlay');
+const closeMenuBtn = document.getElementById('closeMenu');
 
 const nameInput = document.getElementById('name');
 const phoneInput = document.getElementById('phone');
 const dateInput = document.getElementById('date');
 const timeInput = document.getElementById('time');
-const qtyInput = document.getElementById('qty'); // Make sure your qty input has id="qty"
+const qtyInput = document.getElementById('qty');
 
 const foodTitle = document.getElementById('foodTitle');
 const bookingModal = document.getElementById('bookingModal');
@@ -20,22 +20,29 @@ let cart = [];
 let selectedItem = {};
 
 // =======================
-// MOBILE MENU HANDLERS
+// MOBILE MENU FUNCTIONS
 // =======================
-hamburger.addEventListener('click', () => {
+function openMenu() {
   mobileMenu.classList.add('active');
   overlay.classList.add('active');
-});
+  hamburger.classList.add('hide'); // 🔥 hide hamburger
+}
 
-closeMenu.addEventListener('click', () => {
+function closeMenu() {
   mobileMenu.classList.remove('active');
   overlay.classList.remove('active');
-});
+  hamburger.classList.remove('hide'); // 🔥 show hamburger
+}
 
-overlay.addEventListener('click', () => {
-  mobileMenu.classList.remove('active');
-  overlay.classList.remove('active');
-});
+// =======================
+// MOBILE MENU EVENTS
+// =======================
+hamburger.addEventListener('click', openMenu);
+overlay.addEventListener('click', closeMenu);
+
+if (closeMenuBtn) {
+  closeMenuBtn.addEventListener('click', closeMenu);
+}
 
 // =======================
 // BOOKING HANDLERS
@@ -50,7 +57,9 @@ function closeBooking() {
   bookingModal.style.display = 'none';
 }
 
-// Add booking to cart
+// =======================
+// CONFIRM BOOKING
+// =======================
 function confirmBooking() {
   const booking = {
     ...selectedItem,
@@ -61,7 +70,6 @@ function confirmBooking() {
     phone: phoneInput.value,
   };
 
-  // Validate required fields
   if (!booking.name || !booking.phone || !booking.date || !booking.time || !booking.qty) {
     alert('Please fill in all fields!');
     return;
@@ -73,11 +81,13 @@ function confirmBooking() {
   clearBookingForm();
 }
 
-// Render cart items
+// =======================
+// RENDER CART
+// =======================
 function renderCart() {
   cartItems.innerHTML = '';
 
-  cart.forEach((item, index) => {
+  cart.forEach((item) => {
     cartItems.innerHTML += `
       <p>
         <strong>${item.name}</strong><br>
@@ -90,7 +100,9 @@ function renderCart() {
   });
 }
 
-// Clear form inputs after booking
+// =======================
+// CLEAR FORM
+// =======================
 function clearBookingForm() {
   nameInput.value = '';
   phoneInput.value = '';
