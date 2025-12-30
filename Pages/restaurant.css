@@ -1029,6 +1029,82 @@ body {
   border-radius: var(--radius);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
+  /* Grid */
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  /* Card */
+  .testimonial-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 35px 60px rgba(0, 0, 0, 0.12);
+  }
+
+  .testimonial-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+  }
+
+  /* Content */
+  .testimonial-content {
+    padding: 1.8rem;
+    text-align: center;
+  }
+
+  .stars {
+    color: #f0b429;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .testimonial-content p {
+    color: #374151;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+  }
+
+  .testimonial-content h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .testimonial-content span {
+    font-size: 0.85rem;
+    color: #6b7280;
+  }
+
+  /* Responsive Grid */
+  .grid {
+    display: grid;
+    gap: 2rem;
+  }
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 768px) {
+    .grid-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 
 /* =====================================================
    FOOTER FINAL FIX (SAFE OVERRIDE – DO NOT REMOVE)

@@ -684,7 +684,7 @@
     transition: all 0.3s ease;
   }
   .btn-primary:hover {
-    background-color: var(--primary);
+    background-color: var(--primary) !important;
     color: #fff;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(232, 93, 50, 0.3);
@@ -2003,6 +2003,7 @@ html, body {
   .btn-hero,
   .btn-outline {
     width: 100%;
+    margin-top: 10px;
   }
 
   /* STATS */
