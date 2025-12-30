@@ -143,9 +143,9 @@
       <!-- STEP 3: Visitor Details -->
       <div class="panel">
         <h2>Visitor Details</h2>
-        <input type="text" id="name" placeholder="Full Name">
-        <input type="email" id="email" placeholder="Email Address">
-        <input type="tel" id="phone" placeholder="Phone Number">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address"required>
+        <input type="tel" id="phone" placeholder="Phone Number"required>
         <input type="date" id="date">
         <div class="actions">
           <button class="btn outline back">Back</button>
@@ -167,12 +167,12 @@
               placeholder="1234 5678 9012 3456" maxlength="19"></div>
           <div class="card-row">
             <div class="card-field"><label>Expiry</label><input type="text" id="cardExpiry" placeholder="MM/YY"
-                maxlength="5"></div>
+                maxlength="5" required></div>
             <div class="card-field"><label>CVV</label><input type="password" id="cardCVV" placeholder="123"
-                maxlength="3"></div>
+                maxlength="3" required></div>
           </div>
           <div class="card-field"><label>Cardholder Name</label><input type="text" id="cardName"
-              placeholder="Your Name"></div>
+              placeholder="Your Name" required></div>
         </div>
 
         <div id="qrCodeSection">

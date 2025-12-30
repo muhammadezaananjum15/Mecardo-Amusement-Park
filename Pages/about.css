@@ -1641,8 +1641,8 @@ body {
 @media (max-width: 992px) {
   .mobile-menu ul {
     width: 100%;
+    padding-right: 30px;
   }
-
   .mobile-menu li {
     width: 100%;
     text-align: center;

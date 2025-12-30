@@ -74,9 +74,9 @@
         <div class="modal-body">
           <form>
             <label>Email Address</label>
-            <input type="email" class="form-control mb-3" placeholder="Enter email" />
+            <input type="email" class="form-control mb-3" placeholder="Enter email" required/>
             <label>Password</label>
-            <input type="password" class="form-control mb-3" placeholder="Enter password" />
+            <input type="password" class="form-control mb-3" placeholder="Enter password" required/>
             <button class="btn btn-ticket w-100">Login</button>
           </form>
           <div class="text-center mt-3">
@@ -98,60 +98,20 @@
         <div class="modal-body">
           <form>
             <label>Full Name</label>
-            <input type="text" class="form-control mb-3" placeholder="Full name" />
+            <input type="text" class="form-control mb-3" placeholder="Full name" required/>
             <label>Email Address</label>
-            <input type="email" class="form-control mb-3" placeholder="Email" />
+            <input type="email" class="form-control mb-3" placeholder="Email"required />
             <label>Password</label>
-            <input type="password" class="form-control mb-3" placeholder="Password" />
+            <input type="password" class="form-control mb-3" placeholder="Password" required/>
             <label>Confirm Password</label>
-            <input type="password" class="form-control mb-3" placeholder="Confirm password" />
+            <input type="password" class="form-control mb-3" placeholder="Confirm password" required/>
             <button class="btn btn-ticket w-100">Create Account</button>
           </form>
         </div>
       </div>
     </div>
   </div>
-  <div class="modal fade" id="ticketModal">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content p-4">
-        <div class="modal-header">
-          <h5 class="modal-title">🎟 Book Tickets</h5>
-          <button class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <form class="row g-3">
-            <div class="col-md-6">
-              <label>Full Name</label>
-              <input type="text" class="form-control" />
-            </div>
-            <div class="col-md-6">
-              <label>Email</label>
-              <input type="email" class="form-control" />
-            </div>
-            <div class="col-md-6">
-              <label>Select Ticket Type</label>
-              <select class="form-select">
-                <option>Regular Pass - $20</option>
-                <option>Premium Pass - $35</option>
-                <option>Family Package - $60</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label>Number of Tickets</label>
-              <input type="number" class="form-control" min="1" value="1" />
-            </div>
-            <div class="col-12">
-              <label>Date of Visit</label>
-              <input type="date" class="form-control" />
-            </div>
-            <div class="col-12 mt-3">
-              <button class="btn btn-ticket w-100">Confirm Booking</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
+
   <section class="products mt-5">
     <div class="card mt-3">
       <img src="../Assets/Restaurant,menu/3.webp" alt="" />

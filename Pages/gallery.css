@@ -795,7 +795,10 @@ left: 95px;
     padding-right: 1.25rem;
     box-sizing: border-box;
   }
-
+  .mobile-menu ul {
+    width: 100%;
+    padding-right: 30px;
+  }
   /* WHEN MENU IS OPEN */
   .mobile-menu.active {
     left: 0 !important;
