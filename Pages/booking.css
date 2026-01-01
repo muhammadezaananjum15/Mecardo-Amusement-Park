@@ -441,9 +441,7 @@ select#passType {
   display: flex;
   gap: 10px;
 }
-/* =========================
-   GENERAL PAYMENT SECTIONS
-========================= */
+
 #cardDetails,
 #qrCode,
 #paypal-button-container {
@@ -467,9 +465,6 @@ select#passType {
   transform: translateY(0);
 }
 
-/* =========================
-   CARD PAYMENT
-========================= */
 #cardDetails h3 {
   text-align: center;
   margin-bottom: 20px;
@@ -507,9 +502,6 @@ select#passType {
   gap: 10px;
 }
 
-/* =========================
-   QR PAYMENT
-========================= */
 #qrCode {
   text-align: center;
 }
@@ -545,9 +537,6 @@ select#passType {
   transform: scale(1.05);
 }
 
-/* =========================
-   PAYPAL PAYMENT
-========================= */
 #paypal-button-container {
   padding: 20px;
   background: #fff;
@@ -616,9 +605,7 @@ select#passType {
   font-weight: 600;
   color: #1a8a8a;
 }
-/* =========================
-   MOBILE (≤768px)
-========================= */
+
 @media (max-width: 768px) {
 
   .hero h1 {
@@ -655,9 +642,6 @@ select#passType {
   }
 }
 
-/* =========================
-   SMALL MOBILE (≤480px)
-========================= */
 @media (max-width: 480px) {
 
   .hero h1 {

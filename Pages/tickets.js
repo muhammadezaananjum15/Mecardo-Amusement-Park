@@ -19,7 +19,6 @@ overlay.addEventListener('click', () => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Intersection Observer for fade-up animations
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px',
@@ -34,13 +33,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }, observerOptions);
 
-  // Observe all fade-up elements
   document.querySelectorAll('.fade-up').forEach((el) => {
     el.style.animationPlayState = 'paused';
     observer.observe(el);
   });
 
-  // Ticket card hover effects
   const ticketCards = document.querySelectorAll('.ticket-card');
 
   ticketCards.forEach((card) => {
@@ -53,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Add-on card hover effects
   const addonCards = document.querySelectorAll('.addon-card');
 
   addonCards.forEach((card) => {
@@ -65,6 +61,5 @@ document.addEventListener('DOMContentLoaded', function () {
       this.style.transform = 'scale(1)';
     });
   });
-
   console.log('Tickets page loaded successfully');
 });

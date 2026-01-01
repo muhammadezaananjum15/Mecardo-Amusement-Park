@@ -1,7 +1,5 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap');
-
-/* CSS Variables */
 :root {
   --primary: #e85d32;
   --primary-light: #ff7a52;
@@ -16,32 +14,19 @@
   --muted: #f0ede8;
   --muted-foreground: #6b7280;
   --border: #d1d5db;
-
   --park-navy: #1e3a5f;
   --park-cream: #faf8f5;
 
   --font-display: 'Fredoka', sans-serif;
   --font-body: 'Nunito', sans-serif;
+  --park-navy: #1a2a3a;
+  --muted: #777;
+  --primary: #ff6f3c;
 
   --radius: 0.75rem;
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
-
-:root {
-  --primary: #ff6f3c;
-  --secondary: #1a8a8a;
-  --accent: #f0b429;
-  --card: #f9f9f9;
-  --foreground: #333;
-  --muted: #777;
-  --border: #e0e0e0;
-  --radius: 12px;
-  --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  --park-navy: #1a2a3a;
-  --park-cream: #fdf5ec;
-}
-
 /* Reset & Base */
 *,
 *::before,
@@ -79,11 +64,9 @@ body {
   min-height: 100vh;
 }
 
-/* Navbar */
-/* Navbar */
 .nav-bar {
   background-color: #ffffff;
-  height: 70px; /* Fixed height so it doesn't jump around */
+  height: 70px; 
   display: flex;
   align-items: center;
   border-bottom: 1px solid #f0f0f0;
@@ -92,22 +75,21 @@ body {
 
 .nav-container {
   width: 100%;
-  max-width: 1400px; /* Keeps everything from spreading too far */
+  max-width: 1400px; 
   margin: 0 auto;
 }
 
 .img-fluid {
-  max-height: 150px;
-}
-/* Logo Sizing */
+    max-height: 150px;
+    margin-left: -30px;
+  }
+
 .nav-logo-img {
-  height: 65px; /* Perfect size for a 90px navbar */
+  height: 65px; 
   width: auto;
   object-fit: contain;
   display: block;
 }
-
-
 .nav-bar {
   position: fixed;
   top: 0;
@@ -119,14 +101,11 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   padding: 1rem 2rem;
 }
-
 .logo-navbar {
   font-family: var(--font-display);
   font-size: 1.4rem;
   color: var(--foreground);
 }
-
-/* Nav Items */
 .nav-items li {
   list-style: none;
 }
@@ -156,27 +135,22 @@ body {
   color: var(--primary);
 }
 
-/* Desktop Navbar Buttons */
-
-/* Account Button - Transparent */
 .btn-navbar .btn-login {
-  background: transparent; /* Transparent background */
+  background: transparent; 
   border: 2px solid var(--primary);
-  color: var(--primary); /* Text color */
+  color: var(--primary); 
   border-radius: var(--radius);
   padding: 0.5rem 1rem;
   transition: 0.3s;
 }
 
 .btn-navbar .btn-login:hover {
-  background: var(--primary); /* Fill on hover */
-  color: #fff; /* White text on hover */
+  background: var(--primary); 
+  color: #fff;
 }
-
-/* Buy Tickets Button - Remains Solid */
 .btn-navbar .btn-ticket {
-  background: var(--primary); /* Solid background */
-  color: #fff; /* White text */
+  background: var(--primary); 
+  color: #fff; 
   border-radius: var(--radius);
   padding: 0.5rem 1rem;
   border: none;
@@ -184,10 +158,9 @@ body {
 }
 
 .btn-navbar .btn-ticket:hover {
-  background: var(--primary-light); /* Slightly lighter on hover */
+  background: var(--primary-light); 
 }
 
-/* Hamburger */
 .hamburger {
   cursor: pointer;
   display: flex;
@@ -239,8 +212,6 @@ body {
   transition: 0.3s;
   z-index: 1050;
 }
-
-/* Show mobile menu */
 .mobile-menu.active {
   left: 0;
 }
@@ -248,8 +219,6 @@ body {
   opacity: 1;
   visibility: visible;
 }
-
-/* Modals */
 .modal-content {
   border-radius: var(--radius);
 }
@@ -995,21 +964,7 @@ body {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
-/* .cta-btn {
-  background: linear-gradient(135deg, #ff7a18, #ff3d00);
-  color: #fff;
-  padding: 14px 28px;
-  border-radius: 50px;
-  font-weight: 600;
-  transition: all 0.4s ease;
-  border: none;
-}
 
-.cta-btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 15px 35px rgba(255,61,0,0.4);
-}
- */
 
 .gallery-img {
   width: 100%;
@@ -1106,10 +1061,6 @@ body {
     }
   }
 
-/* =====================================================
-   FOOTER FINAL FIX (SAFE OVERRIDE – DO NOT REMOVE)
-===================================================== */
-
 .footer {
   background-color: var(--park-navy);
   color: var(--park-cream);
@@ -1117,7 +1068,6 @@ body {
   position: relative;
 }
 
-/* Grid stays clean */
 .footer-grid {
   display: grid;
   gap: 40px;
@@ -1125,39 +1075,31 @@ body {
   align-items: flex-start;
 }
 
-/* ---------- LOGO FIX ---------- */
 .footer-brand {
-  max-width: 320px;
+    position: relative;
 }
 
-.footer-logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 50px;
-}
+  .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 60px;
+  }
 
 .footer-logo img {
-  position: absolute;
- top: 15px;
- max-height: 150px;
- left: 25px;
-  display: block;
-  object-fit: contain;
+    position: absolute;
+    margin: -30px;
+    left: -10px;
+    max-height: 150px;
+    display: block;
+    object-fit: contain;
+    top: -20px;
+    margin-bottom: 15px;
 }
 
-/* Description */
-.footer-description {
-  font-size: 14px;
-  line-height: 1.7;
-  margin-bottom: 20px;
-  color: #cbd5e1;
-}
-
-/* ---------- SOCIAL ICONS ---------- */
 .footer-social {
   display: flex;
-  gap: 15px;
+  gap: 30px;
 }
 
 .footer-social a {
@@ -1170,15 +1112,12 @@ body {
   color: var(--primary);
   transform: translateY(-3px);
 }
-
-/* ---------- HEADINGS ---------- */
 .footer h4 {
   color: #ffffff;
   font-size: 1.05rem;
   margin-bottom: 15px;
 }
 
-/* ---------- LINKS ---------- */
 .footer-links {
   list-style: none;
   margin: 0;
@@ -1205,8 +1144,6 @@ body {
   color: var(--primary);
   padding-left: 6px;
 }
-
-/* ---------- HIGHLIGHTS SECTION ---------- */
 .footer-highlights ul {
   list-style: none;
   padding-right: 40px;
@@ -1218,7 +1155,6 @@ body {
   color: #cbd5e1;
 }
 
-/* ---------- FOOTER BOTTOM ---------- */
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   margin-top: 50px;
@@ -1247,10 +1183,9 @@ body {
 }
 
 .footer {
-    text-align: left; /* Change from center to left */
-    color: #ffffff; /* Keep your text color */
+    text-align: left; 
+    color: #ffffff; 
 }
-/* ---------- FOOTER (IMPORTANT FIX) ---------- */
 @media (max-width: 992px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
@@ -1266,8 +1201,6 @@ body {
   .footer-grid {
     grid-template-columns: 1fr;
   }
-
-  /* REMOVE FORCED LEFT MARGINS */
   .footer-links,
   .footer-h41,
   .footer-h42,
@@ -1303,7 +1236,7 @@ body {
   .footer-bottom-links a {
     margin: 0 6px;
   }
-}/* ---------- MOBILE FOOTER FIX ---------- */
+}
 @media (max-width: 768px) {
   .footer {
     text-align: center;
@@ -1327,8 +1260,6 @@ body {
   }
 }
 @media (max-width: 768px) {
-
-  /* NAV LOGO LEFT */
   .navbar {
     justify-content: space-between;
   }
@@ -1340,9 +1271,8 @@ body {
     max-height: 150px;
     position: absolute;
     top: -39px;
-    left: -12px;
 }
-  /* FOOTER LOGO CENTER */
+
 .footer-logo img {
   position: absolute;
  top: 15px;
@@ -1581,12 +1511,6 @@ html, body {
     font-size: 0.8rem;
   }
 }
-/* =====================================================
-   FORCE MOBILE MENU FULL WIDTH (ALL BREAKPOINTS)
-   SAFE OVERRIDE — DO NOT REMOVE
-===================================================== */
-
-/* Applies to ALL mobile sizes */
 @media (max-width: 992px) {
 
   /* MOBILE MENU CONTAINER */
@@ -1636,9 +1560,6 @@ html, body {
   }
 }
 
-/* =====================================================
-   OPTIONAL: CENTER MENU LINKS NICELY
-===================================================== */
 @media (max-width: 992px) {
 
 .img-fluid {
@@ -1647,9 +1568,6 @@ html, body {
     top: -42px;
     left: -25px;
 }}
-/* =====================================================
-   SMALL DEVICES (360px MASTER FIX)
-===================================================== */
 @media (max-width: 360px) {
 
   /* GLOBAL TEXT */

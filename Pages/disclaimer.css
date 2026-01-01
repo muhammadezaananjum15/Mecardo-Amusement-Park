@@ -1,7 +1,6 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap');
 
-/* CSS Variables */
 :root {
   --primary: #e85d32;
   --primary-light: #ff7a52;
@@ -16,30 +15,18 @@
   --muted: #f0ede8;
   --muted-foreground: #6b7280;
   --border: #d1d5db;
-
   --park-navy: #1e3a5f;
   --park-cream: #faf8f5;
 
   --font-display: 'Fredoka', sans-serif;
   --font-body: 'Nunito', sans-serif;
+  --park-navy: #1a2a3a;
+  --muted: #777;
+  --primary: #ff6f3c;
 
   --radius: 0.75rem;
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-:root {
-  --primary: #ff6f3c;
-  --secondary: #1a8a8a;
-  --accent: #f0b429;
-  --card: #f9f9f9;
-  --foreground: #333;
-  --muted: #777;
-  --border: #e0e0e0;
-  --radius: 12px;
-  --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  --park-navy: #1a2a3a;
-  --park-cream: #fdf5ec;
 }
 
 /* Reset & Base */
@@ -95,8 +82,9 @@ body {
 }
 
 .img-fluid {
-  max-height: 150px;
-}
+    max-height: 150px;
+    margin-left: -30px;
+  }
 /* Logo Sizing */
 .nav-logo-img {
   height: 65px; /* Perfect size for a 90px navbar */
@@ -339,15 +327,6 @@ body {
     padding: 0 1rem;
   }
 }
-
-/* =====================================================
-   FOOTER FINAL FIX (SAFE OVERRIDE – DO NOT REMOVE)
-===================================================== */
-
-/* =====================================================
-   FOOTER FINAL FIX (SAFE OVERRIDE – DO NOT REMOVE)
-===================================================== */
-
 .footer {
   background-color: var(--park-navy);
   color: var(--park-cream);
@@ -363,36 +342,32 @@ body {
   align-items: flex-start;
 }
 
-
-.footer-logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 50px;
+.footer-brand {
+    position: relative;
 }
+
+  .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 60px;
+  }
 
 .footer-logo img {
-  position: absolute;
- top: 65px;
- max-height: 150px;
- left: 70px;
-  display: block;
-  object-fit: contain;
-}
-
-/* Description */
-.footer-description {
-  margin-top: 30px;
-  font-size: 14px;
-  line-height: 1.7;
-  margin-bottom: 20px;
-  color: #cbd5e1;
+    position: absolute;
+    margin: -30px;
+    left: -10px;
+    max-height: 150px;
+    display: block;
+    object-fit: contain;
+    top: -20px;
+    margin-bottom: 15px;
 }
 
 /* ---------- SOCIAL ICONS ---------- */
 .footer-social {
   display: flex;
-  gap: 15px;
+  gap: 30px;
 }
 
 .footer-social a {
@@ -520,7 +495,7 @@ body {
     max-height: 150px;
     position: absolute;
     top: -39px;
-    left: -12px;
+    /* left: -12px; */
 }
   /* FOOTER LOGO CENTER */
 .footer-logo img {
@@ -536,12 +511,6 @@ left: 95px;
     text-align: center;
   }
 }
-/* =====================================================
-   FINAL RESPONSIVE OVERRIDE (SAFE – NO DELETIONS)
-   Paste this at the END of your CSS file
-===================================================== */
-
-/* Prevent overflow issues */
 html, body {
   width: 100%;
   overflow-x: hidden;
@@ -608,10 +577,6 @@ html, body {
     margin: 0 6px;
   }
 }
-
-/* =====================================================
-   FORCE HIDE HAMBURGER WHEN MENU OPEN
-===================================================== */
 .mobile-menu.active ~ .hamburger,
 .mobile-menu.active + .hamburger,
 .hamburger.hide {
@@ -623,12 +588,8 @@ html, body {
     max-height: 150px;
     position: absolute;
     top: -42px;
-    left: -25px;
+    /* left: -25px; */
 }}
-/* =====================================================
-   EXTRA 320px RESPONSIVE FIX
-   SAFE ADDITION – DO NOT REMOVE
-===================================================== */
 @media (max-width: 320px) {
 
   /* ===== GLOBAL ===== */
@@ -802,12 +763,6 @@ html, body {
     font-size: 0.8rem;
   }
 }
-/* =====================================================
-   FORCE MOBILE MENU FULL WIDTH (ALL BREAKPOINTS)
-   SAFE OVERRIDE — DO NOT REMOVE
-===================================================== */
-
-/* Applies to ALL mobile sizes */
 @media (max-width: 992px) {
   .mobile-menu ul {
     width: 100%;
@@ -837,9 +792,6 @@ html, body {
   }
 }
 
-/* =====================================================
-   EXTRA SAFETY FOR SMALL DEVICES (360px & 320px)
-===================================================== */
 @media (max-width: 360px) {
   .mobile-menu {
     width: 100vw !important;
@@ -859,10 +811,6 @@ html, body {
     padding-right: 0.9rem;
   }
 }
-
-/* =====================================================
-   OPTIONAL: CENTER MENU LINKS NICELY
-===================================================== */
 @media (max-width: 992px) {
   .mobile-menu ul {
     width: 100%;
