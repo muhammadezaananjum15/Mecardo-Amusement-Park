@@ -397,6 +397,7 @@ body {
 }
 
 .btn-hero:hover {
+  color: white;
   transform: translateY(-6px);
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.35);
 }
