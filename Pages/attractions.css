@@ -644,14 +644,17 @@ html, body {
     /* left: -12px; */
 }
 }
-
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+  }
+}
 
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr;
   }
-
-  /* REMOVE FORCED LEFT MARGINS */
   .footer-links,
   .footer-h41,
   .footer-h42,
@@ -854,10 +857,6 @@ html, body {
     top: -37px;
     left: -6px;
 }
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-  }
   .mobile-menu {
     width: 100vw !important;
     max-width: 100vw !important;
