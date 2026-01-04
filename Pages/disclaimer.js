@@ -18,7 +18,6 @@ overlay.addEventListener('click', () => {
   overlay.classList.remove('active');
 });
 
-// Fade-up animation on scroll
 const faders = document.querySelectorAll('.fade-up');
 const appearOptions = {
   threshold: 0.2,

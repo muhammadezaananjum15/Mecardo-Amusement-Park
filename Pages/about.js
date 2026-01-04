@@ -1,6 +1,3 @@
-// =========================================
-// About Page JavaScript
-// =========================================
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 const closeMenu = document.getElementById('closeMenu');
@@ -22,7 +19,6 @@ overlay.addEventListener('click', () => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Intersection Observer for fade-up animations
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px',
@@ -36,14 +32,10 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }, observerOptions);
-
-  // Observe all fade-up elements
   document.querySelectorAll('.fade-up').forEach((el) => {
     el.style.animationPlayState = 'paused';
     observer.observe(el);
   });
-
-  // Timeline animation on scroll
   const timelineItems = document.querySelectorAll('.timeline-item');
 
   const timelineObserver = new IntersectionObserver(
@@ -63,8 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
   timelineItems.forEach((item) => {
     timelineObserver.observe(item);
   });
-
-  // Value cards hover effect
   const valueCards = document.querySelectorAll('.value-card');
 
   valueCards.forEach((card) => {

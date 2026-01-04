@@ -19,7 +19,6 @@ overlay.addEventListener('click', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  // ================= Filter Logic =================
   const filterBtns = document.querySelectorAll('.filter-btn');
   const galleryCards = document.querySelectorAll('.gallery-card');
 
@@ -39,8 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
-
-  // ================= Modal Logic =================
   const modal = document.getElementById('modal');
   const modalImg = document.getElementById('modal-img');
   const modalClose = document.getElementById('modal-close');

@@ -606,8 +606,8 @@ body {
 .img-fluid {
     max-height: 150px;
     position: absolute;
-    top: -39px;
-    /* left: -12px; */
+    top: -37px;
+    left: -6px;
 }
   /* FOOTER LOGO CENTER */
 .footer-logo img {

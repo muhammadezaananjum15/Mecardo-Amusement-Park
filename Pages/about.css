@@ -1471,12 +1471,10 @@ body {
     padding: 1.25rem 1rem;
   }
 
-  /* ===== GALLERY ===== */
   .gallery-item {
     height: 160px;
   }
 
-  /* ===== CTA / TICKETS ===== */
   .tickets-cta {
     padding: 2.5rem 1rem;
   }
@@ -1484,8 +1482,6 @@ body {
   .ticket-card {
     width: 100%;
   }
-
-  /* ===== BUTTON FORCE FULL WIDTH ===== */
   .buy-ticket-wrapper,
   .ticket-btn-wrapper,
   .hero-buttons,
@@ -1500,7 +1496,6 @@ body {
     padding: 13px 0;
   }
 
-  /* ===== FOOTER ===== */
   .footer {
     text-align: center;
   }
@@ -1529,7 +1524,6 @@ body {
 }
 @media (max-width: 992px) {
 
-  /* MOBILE MENU CONTAINER */
   .mobile-menu {
     width: 100vw !important;
     max-width: 100vw !important;
@@ -1541,12 +1535,10 @@ body {
     box-sizing: border-box;
   }
 
-  /* WHEN MENU IS OPEN */
   .mobile-menu.active {
     left: 0 !important;
   }
 
-  /* REMOVE ANY TRANSFORM LIMITS */
   .mobile-menu,
   .mobile-menu.active {
     transform: none !important;
@@ -1589,7 +1581,6 @@ body {
 }
 @media (max-width: 360px) {
 
-  /* GLOBAL TEXT */
   section {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
@@ -1599,8 +1590,6 @@ body {
   h2 { font-size: 1.6rem !important; }
   h3 { font-size: 1.3rem !important; }
   p  { font-size: 0.95rem !important; }
-
-  /* HERO */
   .hero {
     padding-top: 120px;
     text-align: center;
@@ -1620,8 +1609,6 @@ body {
     width: 100%;
     margin-top: 10px;
   }
-
-  /* STATS */
   .hero-stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1645,8 +1632,6 @@ body {
   .stat-label {
     font-size: 0.8rem;
   }
-
-  /* BUTTON FULL WIDTH */
   .buy-ticket-wrapper,
   .ticket-btn-wrapper,
   .hero-buttons,
@@ -1660,8 +1645,6 @@ body {
     padding: 14px 0;
     text-align: center;
   }
-
-  /* FOOTER */
   .footer {
     text-align: center;
   }

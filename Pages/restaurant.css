@@ -1267,11 +1267,7 @@ body {
   .nav-logo {
     text-align: left;
   }
-.img-fluid {
-    max-height: 150px;
-    position: absolute;
-    top: -39px;
-}
+
 
 .footer-logo img {
   position: absolute;
@@ -1565,9 +1561,10 @@ html, body {
 .img-fluid {
     max-height: 150px;
     position: absolute;
-    top: -42px;
-    left: -25px;
-}}
+    top: -37px;
+    left: -6px;
+}
+  }
 @media (max-width: 360px) {
 
   /* GLOBAL TEXT */

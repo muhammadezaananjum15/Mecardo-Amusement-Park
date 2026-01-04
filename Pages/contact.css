@@ -501,15 +501,7 @@ body {
   }
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-  .hero-row {
-    flex-direction: column;
-  }
-  .hero-content {
-    max-width: 100%;
-  }
-}
+
 
 
 
@@ -874,6 +866,70 @@ body {
   .section-title {
     font-size: 2.2rem;
   }
+  .img-fluid {
+    max-height: 150px;
+    position: absolute;
+    top: -37px;
+    left: -6px;
+}
+    .hero-row {
+    flex-direction: column;
+  }
+  .hero-content {
+    max-width: 100%;
+  }
+   .mobile-menu ul {
+    width: 100%;
+    padding-right: 30px;
+  }
+  .mobile-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .mobile-menu a {
+    display: block;
+    width: 100%;
+  }
+  /* MOBILE MENU CONTAINER */
+  .mobile-menu {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    left: -100vw !important;
+    right: 0 !important;
+    margin: 0 !important;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    box-sizing: border-box;
+  }
+
+  /* WHEN MENU IS OPEN */
+  .mobile-menu.active {
+    left: 0 !important;
+  }
+
+  /* REMOVE ANY TRANSFORM LIMITS */
+  .mobile-menu,
+  .mobile-menu.active {
+    transform: none !important;
+  }
+  .hero {
+    padding-top: 120px;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -957,15 +1013,11 @@ body {
   color: var(--primary);
   transform: translateY(-3px);
 }
-
-/* ---------- HEADINGS ---------- */
 .footer h4 {
   color: #ffffff;
   font-size: 1.05rem;
   margin-bottom: 15px;
 }
-
-/* ---------- LINKS ---------- */
 .footer-links {
   list-style: none;
   padding: 0;
@@ -987,8 +1039,6 @@ body {
   color: var(--primary);
   padding-left: 6px;
 }
-
-/* ---------- HIGHLIGHTS SECTION ---------- */
 .footer-highlights ul {
   list-style: none;
   padding: 0;
@@ -1000,8 +1050,6 @@ body {
   margin-bottom: 10px;
   color: #cbd5e1;
 }
-
-/* ---------- FOOTER BOTTOM ---------- */
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   margin-top: 50px;
@@ -1028,8 +1076,6 @@ body {
 .footer-bottom-links a:hover {
   color: var(--primary);
 }
-
-/* ---------- MOBILE FOOTER FIX ---------- */
 @media (max-width: 768px) {
   .footer {
     text-align: center;
@@ -1053,8 +1099,6 @@ body {
   }
 }
 @media (max-width: 768px) {
-
-  /* NAV LOGO LEFT */
   .navbar {
     justify-content: space-between;
   }
@@ -1062,12 +1106,7 @@ body {
   .nav-logo {
     text-align: left;
   }
-.img-fluid {
-    max-height: 150px;
-    position: absolute;
-    top: -39px;
-    /* left: -12px; */
-}
+
   /* FOOTER LOGO CENTER */
 .footer-logo img {
   position: absolute;
@@ -1113,25 +1152,7 @@ left: 65px;
   color: var(--accent);
 }
 
-@media (max-width: 992px) {
-  .hero {
-    padding-top: 120px;
-    text-align: center;
-  }
 
-  .hero-content {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-  .hero-stats {
-    justify-content: center;
-  }
-}
 
 
 
@@ -1182,14 +1203,7 @@ left: 65px;
 .hamburger.hide {
   display: none !important;
 }
-@media (max-width: 992px) {
 
-.img-fluid {
-    max-height: 150px;
-    position: absolute;
-    top: -42px;
-    /* left: -25px; */
-}}
 @media (max-width: 320px) {
 
   /* ===== GLOBAL ===== */
@@ -1363,31 +1377,7 @@ left: 65px;
     font-size: 0.8rem;
   }
 }
-@media (max-width: 992px) {
 
-  /* MOBILE MENU CONTAINER */
-  .mobile-menu {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    left: -100vw !important;
-    right: 0 !important;
-    margin: 0 !important;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    box-sizing: border-box;
-  }
-
-  /* WHEN MENU IS OPEN */
-  .mobile-menu.active {
-    left: 0 !important;
-  }
-
-  /* REMOVE ANY TRANSFORM LIMITS */
-  .mobile-menu,
-  .mobile-menu.active {
-    transform: none !important;
-  }
-}
 @media (max-width: 360px) {
   .mobile-menu {
     width: 100vw !important;
@@ -1407,22 +1397,7 @@ left: 65px;
     padding-right: 0.9rem;
   }
 }
-@media (max-width: 992px) {
-   .mobile-menu ul {
-    width: 100%;
-    padding-right: 30px;
-  }
-  .mobile-menu li {
-    width: 100%;
-    text-align: center;
-  }
 
-  .mobile-menu a {
-    display: block;
-    width: 100%;
-  }
- 
-}
 @media (max-width: 360px) {
 
   /* GLOBAL TEXT */

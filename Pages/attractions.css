@@ -376,19 +376,7 @@ body {
   font-size: 1rem;
   max-width: 500px;
 }
-@media (max-width: 992px) {
-  .zone-section h2 {
-    font-size: 1.9rem;
-  }
 
-  .zone-section p {
-    font-size: 0.95rem;
-  }
-
-  .zone-section {
-    margin-bottom: 60px;
-  }
-}
 @media (max-width: 768px) {
   /* Stack content */
   .zone-section .row {
@@ -656,13 +644,7 @@ html, body {
     /* left: -12px; */
 }
 }
-/* ---------- FOOTER (IMPORTANT FIX) ---------- */
-@media (max-width: 992px) {
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-  }
-}
+
 
 @media (max-width: 768px) {
   .footer-grid {
@@ -706,30 +688,13 @@ html, body {
     margin: 0 6px;
   }
 }
-
-/* =====================================================
-   FORCE HIDE HAMBURGER WHEN MENU OPEN
-===================================================== */
 .mobile-menu.active ~ .hamburger,
 .mobile-menu.active + .hamburger,
 .hamburger.hide {
   display: none !important;
 }
-@media (max-width: 992px) {
 
-.img-fluid {
-    max-height: 150px;
-    position: absolute;
-    top: -42px;
-    /* left: -25px; */
-}}
-/* =====================================================
-   EXTRA 320px RESPONSIVE FIX
-   SAFE ADDITION – DO NOT REMOVE
-===================================================== */
 @media (max-width: 320px) {
-
-  /* ===== GLOBAL ===== */
   html, body {
     overflow-x: hidden;
   }
@@ -764,8 +729,6 @@ html, body {
     width: 20px;
     height: 2px;
   }
-
-  /* ===== MOBILE MENU ===== */
   .mobile-menu {
     width: 100%;
     left: -100%;
@@ -787,13 +750,9 @@ html, body {
   .mobile-menu a {
     font-size: 0.95rem;
   }
-
-  /* FORCE hide hamburger */
   .hamburger.hide {
     display: none !important;
   }
-
-  /* ===== HERO ===== */
   .hero {
     padding-top: 110px;
     text-align: center;
@@ -814,8 +773,6 @@ html, body {
     font-size: 0.9rem;
     padding: 12px 0;
   }
-
-  /* ===== HERO STATS ===== */
   .hero-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -834,8 +791,6 @@ html, body {
   .stat-label {
     font-size: 0.75rem;
   }
-
-  /* ===== CARDS ===== */
   .zone-card,
   .restaurant-card,
   .entertainment-card,
@@ -843,13 +798,9 @@ html, body {
   .info-card {
     padding: 1.25rem 1rem;
   }
-
-  /* ===== GALLERY ===== */
   .gallery-item {
     height: 160px;
   }
-
-  /* ===== CTA / TICKETS ===== */
   .tickets-cta {
     padding: 2.5rem 1rem;
   }
@@ -857,8 +808,6 @@ html, body {
   .ticket-card {
     width: 100%;
   }
-
-  /* ===== BUTTON FORCE FULL WIDTH ===== */
   .buy-ticket-wrapper,
   .ticket-btn-wrapper,
   .hero-buttons,
@@ -872,8 +821,6 @@ html, body {
     text-align: center;
     padding: 13px 0;
   }
-
-  /* ===== FOOTER ===== */
   .footer {
     text-align: center;
   }
@@ -900,15 +847,17 @@ html, body {
     font-size: 0.8rem;
   }
 }
-/* =====================================================
-   FORCE MOBILE MENU FULL WIDTH (ALL BREAKPOINTS)
-   SAFE OVERRIDE — DO NOT REMOVE
-===================================================== */
-
-/* Applies to ALL mobile sizes */
 @media (max-width: 992px) {
-
-  /* MOBILE MENU CONTAINER */
+  .img-fluid {
+    max-height: 150px;
+    position: absolute;
+    top: -37px;
+    left: -6px;
+}
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+  }
   .mobile-menu {
     width: 100vw !important;
     max-width: 100vw !important;
@@ -919,22 +868,39 @@ html, body {
     padding-right: 1.25rem;
     box-sizing: border-box;
   }
-
-  /* WHEN MENU IS OPEN */
   .mobile-menu.active {
     left: 0 !important;
   }
-
-  /* REMOVE ANY TRANSFORM LIMITS */
   .mobile-menu,
   .mobile-menu.active {
     transform: none !important;
   }
+  .mobile-menu ul {
+    width: 100%;
+  }
+
+  .mobile-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .mobile-menu a {
+    display: block;
+    width: 100%;
+  }
+    .zone-section h2 {
+    font-size: 1.9rem;
+  }
+
+  .zone-section p {
+    font-size: 0.95rem;
+  }
+
+  .zone-section {
+    margin-bottom: 60px;
+  }
 }
 
-/* =====================================================
-   EXTRA SAFETY FOR SMALL DEVICES (360px & 320px)
-===================================================== */
 @media (max-width: 360px) {
   .mobile-menu {
     width: 100vw !important;
@@ -955,27 +921,8 @@ html, body {
   }
 }
 
-/* =====================================================
-   OPTIONAL: CENTER MENU LINKS NICELY
-===================================================== */
-@media (max-width: 992px) {
-  .mobile-menu ul {
-    width: 100%;
-  }
 
-  .mobile-menu li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .mobile-menu a {
-    display: block;
-    width: 100%;
-  }
-}
 @media (max-width: 360px) {
-
-  /* GLOBAL TEXT */
   section {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
@@ -1006,8 +953,6 @@ html, body {
     width: 100%;
     margin-top: 10px;
   }
-
-  /* STATS */
   .hero-stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1032,7 +977,6 @@ html, body {
     font-size: 0.8rem;
   }
 
-  /* BUTTON FULL WIDTH */
   .buy-ticket-wrapper,
   .ticket-btn-wrapper,
   .hero-buttons,
