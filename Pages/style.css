@@ -166,6 +166,10 @@ body {
   border: none;
   transition: 0.3s;
 }
+button.btn.btn-ticket.w-100:hover {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
 .btn-navbar .btn-ticket:hover {
   background: var(--primary-light);
 }

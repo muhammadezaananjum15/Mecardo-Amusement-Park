@@ -142,7 +142,10 @@ body {
 }
 
 /* Desktop Navbar Buttons */
-
+button.btn.btn-ticket.w-100:hover {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
 /* Account Button - Transparent */
 .btn-navbar .btn-login {
   background: transparent; /* Transparent background */

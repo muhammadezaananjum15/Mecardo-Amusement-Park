@@ -1,13 +1,23 @@
-// Booking System
+
+// ===================== BOOKING SYSTEM =====================
 const panels = document.querySelectorAll('.panel');
 const steps = document.querySelectorAll('.steps span');
 
 const passType = document.getElementById('passType');
+const dateInput = document.getElementById('date');
+
 const qtyEls = {
   adult: document.getElementById('adult'),
   child: document.getElementById('child'),
   senior: document.getElementById('senior'),
   family: document.getElementById('family'),
+};
+
+const prices = {
+  adult: 49,
+  child: 25,
+  senior: 35,
+  family: 159,
 };
 
 const subtotalEl = document.getElementById('subtotal');
@@ -24,70 +34,107 @@ const addonCards = document.querySelectorAll('.addon-card');
 const promoInput = document.getElementById('promoCode');
 const applyPromoBtn = document.getElementById('applyPromo');
 
-const dateInput = document.getElementById('date');
 let currentStep = 0;
 let promoDiscount = 0;
-const prices = {
-  adult: 49,
-  child: 25,
-  senior: 35,
-  family: 159,
-};
-showPanel(currentStep);
-updateTotal();
 
-qrSection.style.display = 'none';
-paymentStatus.style.display = 'none';
 const VALID_CARD = {
   number: '7391826405173928',
   cvv: '1947',
 };
+
+// ===================== INIT =====================
+showPanel(currentStep);
+updateTotal();
+qrSection.style.display = 'none';
+paymentStatus.style.display = 'none';
+
+// ===================== PANEL CONTROL =====================
 function showPanel(index) {
-  panels.forEach((panel, i) => {
-    panel.classList.toggle('active', i === index);
-  });
-
-  steps.forEach((step, i) => {
-    step.classList.toggle('active', i === index);
-  });
+  panels.forEach((p, i) => p.classList.toggle('active', i === index));
+  steps.forEach((s, i) => s.classList.toggle('active', i === index));
 }
+
+// ===================== VALIDATIONS =====================
 function validateVisitorDetails() {
-  const inputs = panels[2].querySelectorAll('input[required]');
-  for (let input of inputs) {
-    if (!input.value.trim()) {
-      alert('Please fill all visitor details');
-      input.focus();
-      return false;
-    }
-  }
-  return true;
-}
-function validateCardDetails() {
-  const inputs = cardSection.querySelectorAll('input[required]');
-  for (let input of inputs) {
-    if (!input.value.trim()) {
-      alert('Please fill all card details');
-      input.focus();
-      return false;
-    }
-  }
-  return true;
-}
+  const panel = panels[2];
 
-function validateCardCredentials() {
-  const cardNumber = document.getElementById('cardNumber').value.replace(/\s+/g, '');
-  const cvv = document.getElementById('cardCVV').value;
+  const name = panel.querySelector('#name')?.value.trim();
+  const email = panel.querySelector('#email')?.value.trim();
+  const phone = panel.querySelector('#phone')?.value.trim();
 
-  if (cardNumber !== VALID_CARD.number || cvv !== VALID_CARD.cvv) {
-    alert('Invalid card number or CVV');
+  const namePattern = /^[A-Za-z ]+$/;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phonePattern = /^[0-9]{10,15}$/;
+
+  if (!name || !email || !phone) {
+    alert('❌ Please fill all visitor details');
     return false;
   }
+
+  if (!namePattern.test(name)) {
+    alert('❌ Invalid name. Only alphabets and spaces are allowed');
+    return false;
+  }
+
+  if (!emailPattern.test(email)) {
+    alert('❌ Invalid email format');
+    return false;
+  }
+
+  if (!phonePattern.test(phone)) {
+    alert('❌ Invalid phone number. It should contain only digits (10-15 characters)');
+    return false;
+  }
+
   return true;
 }
+
+function validateCardDetails() {
+  const number = document.getElementById('cardNumber').value.replace(/\s+/g, '');
+  const cvv = document.getElementById('cardCVV').value;
+  const expiry = document.getElementById('cardExpiry').value;
+
+  if (!number || !cvv || !expiry) {
+    alert('❌ Please fill all card details');
+    return false;
+  }
+
+  if (!/^\d{16}$/.test(number)) {
+    alert('❌ Card number must be 16 digits');
+    return false;
+  }
+
+  if (!/^\d{3,4}$/.test(cvv)) {
+    alert('❌ Invalid CVV');
+    return false;
+  }
+
+  if (number !== VALID_CARD.number || cvv !== VALID_CARD.cvv) {
+    alert('❌ Invalid card credentials');
+    return false;
+  }
+
+  return true;
+}
+
+function validateBeforePayment() {
+  if (parseFloat(subtotalEl.innerText) <= 0) {
+    alert('❌ Please select at least one ticket');
+    return false;
+  }
+
+  if (!document.querySelector('input[name="pay"]:checked')) {
+    alert('❌ Please select a payment method');
+    return false;
+  }
+
+  return true;
+}
+
+// ===================== NAVIGATION =====================
 document.querySelectorAll('.next').forEach((btn) => {
   btn.addEventListener('click', () => {
     if (currentStep === 2 && !validateVisitorDetails()) return;
-
     if (currentStep < panels.length - 1) {
       currentStep++;
       showPanel(currentStep);
@@ -105,19 +152,23 @@ document.querySelectorAll('.back').forEach((btn) => {
     }
   });
 });
+
+// ===================== QUANTITY =====================
 document.querySelectorAll('.qty button').forEach((btn) => {
   btn.addEventListener('click', () => {
     const type = btn.dataset.t;
     const action = btn.dataset.a;
-    let value = parseInt(qtyEls[type].innerText);
+    let val = parseInt(qtyEls[type].innerText);
 
-    if (action === 'inc') value++;
-    if (action === 'dec' && value > 0) value--;
+    if (action === 'inc') val++;
+    if (action === 'dec' && val > 0) val--;
 
-    qtyEls[type].innerText = value;
+    qtyEls[type].innerText = val;
     updateTotal();
   });
 });
+
+// ===================== ADDONS =====================
 addonCards.forEach((card) => {
   const input = card.querySelector('input');
   card.addEventListener('click', () => {
@@ -126,17 +177,21 @@ addonCards.forEach((card) => {
     updateTotal();
   });
 });
+
+// ===================== PROMO =====================
 applyPromoBtn.addEventListener('click', () => {
   const code = promoInput.value.trim().toLowerCase();
   promoDiscount = 0;
 
   if (code === 'mercado20') promoDiscount = 20;
   else if (code === 'funday10') promoDiscount = 10;
-  else alert('Invalid promo code');
+  else alert('❌ Invalid promo code');
 
-  if (promoDiscount > 0) alert(`Promo applied: $${promoDiscount} off`);
+  if (promoDiscount > 0) alert(`✅ Promo applied: $${promoDiscount} off`);
   updateTotal();
 });
+
+// ===================== TOTAL =====================
 passType.addEventListener('change', updateTotal);
 dateInput.addEventListener('change', updateTotal);
 
@@ -149,7 +204,7 @@ function updateTotal() {
   } else if (passType.value === 'weekend') multiplier = 1.5;
   else if (passType.value === 'holiday') multiplier = 2;
 
-  const ticketTotal =
+  let ticketTotal =
     qtyEls.adult.innerText * prices.adult * multiplier +
     qtyEls.child.innerText * prices.child * multiplier +
     qtyEls.senior.innerText * prices.senior * multiplier +
@@ -162,14 +217,15 @@ function updateTotal() {
     }
   });
 
-  let finalTotal = ticketTotal + addonsTotal - promoDiscount;
-  if (finalTotal < 0) finalTotal = 0;
+  let finalTotal = Math.max(0, ticketTotal + addonsTotal - promoDiscount);
 
   subtotalEl.innerText = finalTotal.toFixed(2);
   document.getElementById('total2').innerText = finalTotal.toFixed(2);
   document.getElementById('pAddons').innerText = addonsTotal.toFixed(2);
   document.getElementById('pPromo').innerText = promoDiscount.toFixed(2);
 }
+
+// ===================== PAYMENT =====================
 document.querySelectorAll('input[name="pay"]').forEach((radio) => {
   radio.addEventListener('change', () => {
     paymentStatus.style.display = 'none';
@@ -193,33 +249,30 @@ function generateQRCode() {
     height: 150,
   });
 }
+
 payBtn.addEventListener('click', () => {
-  const selectedPay = document.querySelector('input[name="pay"]:checked');
+  if (!validateBeforePayment()) return;
 
-  if (!selectedPay) {
-    alert('Please select a payment method');
-    return;
-  }
+  const method = document.querySelector('input[name="pay"]:checked').value;
 
-  if (selectedPay.value === 'card') {
-    if (!validateCardDetails()) return;
-    if (!validateCardCredentials()) return;
-  }
+  if (method === 'card' && !validateCardDetails()) return;
 
   paymentStatus.style.display = 'flex';
   paymentStatus.classList.remove('success');
+  paymentMessage.innerText = method === 'qr' ? 'Waiting for payment...' : 'Processing payment...';
 
-  paymentMessage.innerText =
-    selectedPay.value === 'qr' ? 'Waiting for payment...' : 'Processing payment...';
-
-  setTimeout(completeBooking, selectedPay.value === 'qr' ? 6000 : 2000);
+  setTimeout(completeBooking, method === 'qr' ? 6000 : 2000);
 });
+
 function completeBooking() {
   paymentStatus.classList.add('success');
   paymentMessage.innerText = 'Payment Successful!';
 
   document.getElementById('final').innerText = subtotalEl.innerText;
   document.getElementById('userEmail').innerText = document.getElementById('email').value;
+
+  // ✅ ADD THIS
+  sessionStorage.setItem('bookingDone', 'true');
 
   currentStep++;
   showPanel(currentStep);

@@ -76,11 +76,16 @@
         </div>
         <div class="modal-body">
           <form>
+            <label>Full Name</label>
+            <input type="text" id="loginName" class="form-control mb-3" placeholder="Enter your name" required>
+  
             <label>Email Address</label>
-            <input type="email" class="form-control mb-3" placeholder="Enter email"required />
+            <input type="email" id="loginEmail" class="form-control mb-3" placeholder="Enter email" required>
+  
             <label>Password</label>
-            <input type="password" class="form-control mb-3" placeholder="Enter password"required />
-            <button class="btn btn-ticket w-100">Login</button>
+            <input type="password" id="loginPassword" class="form-control mb-3" placeholder="Enter password" required>
+  
+            <button type="button" class="btn btn-ticket w-100" onclick="login()">Login</button>
           </form>
           <div class="text-center mt-3">
             <small>Don't have an account?
@@ -91,7 +96,6 @@
       </div>
     </div>
   </div>
-
   <div class="modal fade" id="signupModal">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content p-3">
@@ -101,15 +105,12 @@
         </div>
         <div class="modal-body">
           <form>
-            <label>Full Name</label>
-            <input type="text" class="form-control mb-3" placeholder="Full name"required />
-            <label>Email Address</label>
-            <input type="email" class="form-control mb-3" placeholder="Email"required />
-            <label>Password</label>
-            <input type="password" class="form-control mb-3" placeholder="Password" required/>
-            <label>Confirm Password</label>
-            <input type="password" class="form-control mb-3" placeholder="Confirm password"required />
-            <button class="btn btn-ticket w-100">Create Account</button>
+            <input type="text" id="fullName" class="form-control mb-3" placeholder="Full name" required>
+            <input type="email" id="signupEmail" class="form-control mb-3" placeholder="Email" required>
+            <input type="tel" id="phone" class="form-control mb-3" placeholder="Phone Number" required>
+            <input type="password" id="signupPassword" class="form-control mb-3" placeholder="Password" required>
+            <input type="password" id="confirmPassword" class="form-control mb-3" placeholder="Confirm password" required>
+            <button type="button" class="btn btn-ticket w-100" onclick="signup()">Create Account</button>
           </form>
         </div>
       </div>
@@ -690,13 +691,13 @@
             The nation's pride, brought to you by Seth Groups of Companies.
             45 acres of pure adventure, thrill, and family entertainment.
           </p>
-
           <div class="footer-social">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-twitter-x"></i></a>
-            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.x.com/" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a>
           </div>
+
         </div>
         <div>
           <h4 class="footer-h42">Quick Links</h4>

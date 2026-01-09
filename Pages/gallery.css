@@ -248,7 +248,10 @@ body {
   border: 2px solid var(--primary);
   color: var(--primary);
 }
-
+button.btn.btn-ticket.w-100:hover {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
 /* ===== Filter Buttons ===== */
 .filter-container {
   text-align: center;

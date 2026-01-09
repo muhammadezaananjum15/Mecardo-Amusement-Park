@@ -395,6 +395,10 @@ body {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
   transition: transform 0.3s, box-shadow 0.3s;
 }
+button.btn.btn-ticket.w-100:hover {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
 .btn-hero:hover {
   color: white;
   transform: translateY(-6px);

@@ -630,7 +630,10 @@ button.btn-account-ticket {
   gap: 0.5rem;
   transition: all 0.3s ease;
 }
-
+button.btn.btn-ticket.w-100:hover {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
 .btn-hero:hover {
   background-color: var(--park-cream);
   transform: translateY(-2px);

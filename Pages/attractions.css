@@ -158,7 +158,10 @@ body {
   background: var(--primary); /* Fill on hover */
   color: #fff; /* White text on hover */
 }
-
+button.btn.btn-ticket.w-100:hover {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
 /* Buy Tickets Button - Remains Solid */
 .btn-navbar .btn-ticket {
   background: var(--primary); /* Solid background */
