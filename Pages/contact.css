@@ -79,11 +79,9 @@ body {
 .feedback-float:hover {
   background-color: #ff7a52;
 }
-
-/* Navbar */
 .nav-bar {
   background-color: #ffffff;
-  height: 70px; /* Fixed height so it doesn't jump around */
+  height: 70px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #f0f0f0;
@@ -92,7 +90,7 @@ body {
 
 .nav-container {
   width: 100%;
-  max-width: 1400px; /* Keeps everything from spreading too far */
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -100,9 +98,8 @@ body {
     max-height: 150px;
     margin-left: -30px;
   }
-/* Logo Sizing */
 .nav-logo-img {
-  height: 65px; /* Perfect size for a 90px navbar */
+  height: 65px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -125,8 +122,6 @@ body {
   font-size: 1.4rem;
   color: var(--foreground);
 }
-
-/* Nav Items */
 .nav-items li {
   list-style: none;
 }
@@ -155,28 +150,22 @@ body {
 .nav-items li a:hover {
   color: var(--primary);
 }
-
-/* Desktop Navbar Buttons */
-
-/* Account Button - Transparent */
 .btn-navbar .btn-login {
-  background: transparent; /* Transparent background */
+  background: transparent;
   border: 2px solid var(--primary);
-  color: var(--primary); /* Text color */
+  color: var(--primary); 
   border-radius: var(--radius);
   padding: 0.5rem 1rem;
   transition: 0.3s;
 }
 
 .btn-navbar .btn-login:hover {
-  background: var(--primary); /* Fill on hover */
-  color: #fff; /* White text on hover */
+  background: var(--primary);
+  color: #fff;
 }
-
-/* Buy Tickets Button - Remains Solid */
 .btn-navbar .btn-ticket {
-  background: var(--primary); /* Solid background */
-  color: #fff; /* White text */
+  background: var(--primary);
+  color: #fff;
   border-radius: var(--radius);
   padding: 0.5rem 1rem;
   border: none;
@@ -184,10 +173,8 @@ body {
 }
 
 .btn-navbar .btn-ticket:hover {
-  background: var(--primary-light); /* Slightly lighter on hover */
+  background: var(--primary-light); 
 }
-
-/* Hamburger */
 .hamburger {
   cursor: pointer;
   display: flex;
@@ -201,8 +188,6 @@ body {
   border-radius: 2px;
   transition: 0.3s;
 }
-
-/* Mobile Sidebar */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -238,8 +223,6 @@ body {
   transition: 0.3s;
   z-index: 1050;
 }
-
-/* Show mobile menu */
 .mobile-menu.active {
   left: 0;
 }
@@ -247,16 +230,15 @@ body {
   opacity: 1;
   visibility: visible;
 }
-
-/* Modals */
 .modal-content {
   border-radius: var(--radius);
 }
 .btn-ticket {
-  background: var(--primary);
-  color: #fff;
-  border-radius: var(--radius);
-  padding: 0.5rem;
+    background: var(--primary);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 0.5rem;
+    width: 100%;
 }
 .btn-login {
   border-radius: var(--radius);
@@ -275,8 +257,6 @@ body {
   padding-top: 100px;
   color: var(--park-cream);
 }
-
-/* Hero Row */
 .hero-row {
   display: flex;
   align-items: flex-start;
@@ -342,14 +322,10 @@ body {
     opacity: 0.6;
   }
 }
-
-/* Hero Content */
 .hero-content {
   max-width: 600px;
   text-align: left;
 }
-
-/* Badge */
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -365,8 +341,6 @@ body {
 .hero-badge:hover {
   transform: translateY(-4px) scale(1.05);
 }
-
-/* Heading */
 .hero h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -378,8 +352,6 @@ body {
 .hero h1 span {
   color: var(--primary);
 }
-
-/* Subtitle & Description */
 .hero-subtitle {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
@@ -389,8 +361,6 @@ body {
   margin-bottom: 1.5rem;
   color: rgba(255, 255, 255, 0.8);
 }
-
-/* Buttons */
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -421,8 +391,6 @@ body {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
 }
-
-/* Stats */
 .hero-stats {
   display: flex;
   flex-wrap: wrap;
@@ -456,8 +424,6 @@ body {
   font-size: 0.85rem;
   color: rgba(250, 248, 245, 0.6);
 }
-
-/* Fade-up animation for elements */
 .animate-fade-up {
   opacity: 0;
   transform: translateY(20px);
@@ -501,13 +467,6 @@ body {
     transform: translateY(0);
   }
 }
-
-
-
-
-
-
-/* Animation Keyframes */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -518,8 +477,6 @@ body {
     transform: translateY(0);
   }
 }
-
-/* Contact Section Styling */
 .contact-main {
   padding: 80px 0;
   background-color: var(--park-cream);
@@ -538,8 +495,6 @@ body {
   gap: 60px;
   align-items: start;
 }
-
-/* Info Cards Animation & Styling */
 .fade-up {
   opacity: 0;
   animation: fadeUp 0.8s ease forwards;
@@ -633,7 +588,6 @@ body {
   box-shadow: 0 0 0 4px rgba(232, 93, 50, 0.1);
 }
 
-/* Button Refinement */
 .btn-primary {
   background: var(--primary);
   color: white;
@@ -657,7 +611,6 @@ body {
   box-shadow: 0 5px 15px rgba(232, 93, 50, 0.3);
 }
 
-/* Responsive */
 @media (max-width: 968px) {
   .contact-grid {
     grid-template-columns: 1fr;
@@ -730,7 +683,6 @@ body {
   font-weight: 600;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .map-wrapper {
     height: 350px;
@@ -745,7 +697,6 @@ body {
     font-size: 0.9rem;
   }
 }
-/* ================= FADE-UP ANIMATION ================= */
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
@@ -758,8 +709,6 @@ body {
     transform: translateY(0);
   }
 }
-
-/* ================= TOAST NOTIFICATION ================= */
 .toast {
   position: fixed;
   bottom: 30px;
@@ -804,9 +753,7 @@ body {
   font-size: 0.85rem;
   opacity: 0.85;
 }
-/* =========================
-   FAQ STYLES
-========================= */
+
 .contact-faq {
   padding: 4rem 2rem;
   background: var(--background);
